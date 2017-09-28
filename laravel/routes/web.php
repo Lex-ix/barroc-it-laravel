@@ -12,5 +12,25 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
+});
+
+Route::get('/add_customer', function () {
+    return view('add_customer');
+});
+
+Route::get('/change_customer', function () {
+    return view('change_customer');
+});
+
+Route::get('/help_en', function () {
+    return view('help_EN');
+});
+
+Route::get('/help_nl', function () {
+    return view('help_NL');
+});
+
+Route::get('/login', function () {
+    return view('login');
 });
