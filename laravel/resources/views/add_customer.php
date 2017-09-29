@@ -5,7 +5,7 @@
 ?>
 
 <section>
-    <div class="container">
+    <div class="container customer">
         <h2 class="subhead">Klant toevoegen</h2>
 
         <form action="">

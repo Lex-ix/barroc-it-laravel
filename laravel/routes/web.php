@@ -34,3 +34,7 @@ Route::get('/help_nl', function () {
 Route::get('/login', function () {
     return view('login');
 });
+    
+    Route::get('/finance', function () {
+        return view('finance');
+    });

@@ -95,7 +95,9 @@ input {
     margin-bottom: 10px;
 
     padding: 5px;
+}
 
+.customer input{
     width: 350px;
 }
 
@@ -262,7 +264,5 @@ nav a:hover, nav .active {
 /*===================FINANCE================*/
 
 .finance td {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
+    padding-right: 60px;
 }

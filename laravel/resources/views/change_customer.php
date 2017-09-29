@@ -5,7 +5,7 @@ require_once ('nav.php');
 ?>
 
 <section>
-    <div class="container">
+    <div class="container customer">
         <h2 class="subhead">Klant wijzigen</h2>
 
         <form action="">
