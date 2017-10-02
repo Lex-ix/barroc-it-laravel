@@ -38,16 +38,21 @@ Route::get('/login', function () {
 Route::get('/sales', function () {
     return view('sales');
 });
+
 Route::get('/development', function () {
     return view('development');
 });
+
 Route::get('/dev_start', function () {
     return view('dev_start');
 });
+
 Route::get('/dev_finish', function () {
     return view('dev_finish');
 });
+
 Route::get('/finance', function () {
     return view('finance');
 });
+
 
