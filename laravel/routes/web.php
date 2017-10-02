@@ -38,3 +38,13 @@ Route::get('/login', function () {
     Route::get('/finance', function () {
         return view('finance');
     });
+
+Route::get('/development', function () {
+    return view('development');
+});
+Route::get('/dev_start', function () {
+    return view('dev_start');
+});
+Route::get('/dev_finish', function () {
+    return view('dev_finish');
+});
