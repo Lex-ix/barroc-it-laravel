@@ -6,60 +6,60 @@ require_once ('nav.php');
 
 <section>
     <div class="container customer">
-        <h2 class="subhead">Klant wijzigen</h2>
+        <h2 class="subhead">Edit customer</h2>
 
         <form action="">
-            <h4 class="subhead">Persoonlijke informatie:</h4>
+            <h4 class="subhead">Personal information:</h4>
             <div class="form-group">
-                <label for="name">Voornaam:*</label>
-                <input type="text" id="name" placeholder="Voer hier uw eigen naam in." value="IMPORT FROM DATABASE" required>
+                <label for="name">First name:*</label>
+                <input type="text" id="name" placeholder="Enter your fisrt name here." value="IMPORT FROM DATABASE" required>
             </div>
             <div class="form-group">
-                <label for="preposition">Tussenvoegsel:</label>
-                <input type="text" id="preposition" placeholder="Voeg hier indien mogelijk uw tussenvoegsel in." value="IMPORT FROM DATABASE">
+                <label for="preposition">preposition:</label>
+                <input type="text" id="preposition" placeholder="Enter your preposition here." value="IMPORT FROM DATABASE">
             </div>
             <div class="form-group">
-                <label for="lastname">Achternaam:*</label>
-                <input type="text" id="lastname" placeholder="Voeg hier uw achternaam in." value="IMPORT FROM DATABASE" required>
+                <label for="lastname">Last name:*</label>
+                <input type="text" id="lastname" placeholder="Enter your lastname here." value="IMPORT FROM DATABASE" required>
             </div>
 
-            <h4 class="subhead">Bedrijsinformatie:</h4>
+            <h4 class="subhead">Company information:</h4>
             <div class="form-group">
-                <label for="company">Bedrijfsnaam:*</label>
-                <input type="text" id="company" placeholder="Voer hier uw bedrijfsnaam in." value="IMPORT FROM DATABASE" required>
+                <label for="company">Company name:*</label>
+                <input type="text" id="company" placeholder="Enter your company name here." value="IMPORT FROM DATABASE" required>
             </div>
             <div class="form-group">
-                <label for="phone">Telefoon nummer:*</label>
-                <input type="text" id="phone" placeholder="Voer hier uw telefoon nummer in." value="IMPORT FROM DATABASE" required>
+                <label for="phone">Phone number:*</label>
+                <input type="text" id="phone" placeholder="Enter your phone number here." value="IMPORT FROM DATABASE" required>
             </div>
             <div class="form-group">
-                <label for="establishment">Vestiging:*</label>
-                <input type="text" id="establishment" placeholder="Voer hier uw vestiging in." value="IMPORT FROM DATABASE" required>
+                <label for="establishment">Establishment:*</label>
+                <input type="text" id="establishment" placeholder="Enter your establishment here." value="IMPORT FROM DATABASE" required>
             </div>
             <div class="form-group">
-                <label for="zipcode">Postcode:*</label>
-                <input type="text" id="zipcode" placeholder="Voer hier uw postcode in." value="IMPORT FROM DATABASE" required>
+                <label for="zipcode">Zipcode:*</label>
+                <input type="text" id="zipcode" placeholder="Enter your zipcode here." value="IMPORT FROM DATABASE" required>
             </div>
             <div class="form-group">
                 <label for="email">E-mail:*</label>
-                <input type="email" id="email" placeholder="Voer hier uw vestiging in." value="IMPORT FROM DATABASE" required>
+                <input type="email" id="email" placeholder="Enter your e-mail here." value="IMPORT FROM DATABASE" required>
             </div>
 
-            <h4 class="subhead">Project informatie</h4>
+            <h4 class="subhead">Project information</h4>
             <div class="form-group">
-                <label for="project">Project naam:*</label>
-                <input type="text" id="project" placeholder="Voer hier uw project naam in." value="IMPORT FROM DATABASE" required>
+                <label for="project">Project name:*</label>
+                <input type="text" id="project" placeholder="Enter your project name here." value="IMPORT FROM DATABASE" required>
             </div>
             <div class="form-group">
-                <label for="amount">Hoeveelheid achterstand:*</label>
-                <input type="text" id="amount" placeholder="Voer hier uw limiet in." value="IMPORT FROM DATABASE" required>
+                <label for="amount">Max amount of debt:*</label>
+                <input type="text" id="amount" placeholder="Enter the max amount of debt here." value="IMPORT FROM DATABASE" required>
             </div>
             <div class="form-group">
-                <label for="comment">Opmerking:</label>
-                <input type="text" id="comment" placeholder="Voer hier uw opmerking naam in." value="IMPORT FROM DATABASE">
+                <label for="comment">Comment:</label>
+                <input type="text" id="comment" placeholder="Enter your comment here." value="IMPORT FROM DATABASE">
             </div>
             <div class="form-group">
-                <input class="submit" type="submit" value="toevoegen">
+                <input class="submit" type="submit" value="Add">
             </div>
         </form>
     </div>
