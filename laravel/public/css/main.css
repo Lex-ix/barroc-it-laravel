@@ -184,6 +184,10 @@ th {
     padding-bottom: 10px;
 }
 
+tr {
+    padding-right: 10px;
+}
+
 .background .gerrie:hover {
     background: #fff;
 }
