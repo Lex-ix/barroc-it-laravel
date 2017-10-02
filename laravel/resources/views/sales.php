@@ -167,7 +167,8 @@
 <div class="container">
     <section>
         <h2 class="subhead">Customers in debt</h2>
-        <table>
+        <div class="scroll">
+            <table>
             <tr>
                 <th>ID</th>
                 <th>Name</th>
@@ -289,6 +290,7 @@
                 <td>Lorem</td>
             </tr>
         </table>
+        </div>
     </section>
 </div>
 <?php
