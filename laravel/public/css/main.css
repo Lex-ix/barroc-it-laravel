@@ -277,3 +277,11 @@ nav a:hover, nav .active {
     display: flex;
     justify-content: center;
 }
+
+.request-info {
+    padding-top: 10px;
+}
+
+.pause-project {
+    padding-top: 10px;
+}
