@@ -13,7 +13,7 @@
 <div class="container">
     <h2 class="subhead">Sales</h2>
     <section>
-        <a href="">Klant toevoegen</a>
+        <a href="add_customer">Add customer</a>
     </section>
 
     <section>
