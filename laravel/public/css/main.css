@@ -178,11 +178,15 @@ th {
     padding-bottom: 10px;
 }
 
-td {
-    text-align: center;
+    /*td {*/
+        /*text-align: center;*/
+    /*}*/
+
+.background tr:hover {
+    background: #fff;
 }
 
-tr:nth-child(even) {
+tr:hover {
     background: #f2f2f2;
 }
 
