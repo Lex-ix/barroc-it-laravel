@@ -171,6 +171,13 @@ table {
     border-collapse: collapse;
 }
 
+.scroll {
+    overflow-y: auto;
+    max-height: 200px;
+
+    margin-bottom: 15px;
+}
+
 th {
     font-size: 20px;
     padding-right: 25px;
@@ -182,11 +189,11 @@ th {
         /*text-align: center;*/
     /*}*/
 
-.background tr:hover {
+.background .gerrie:hover {
     background: #fff;
 }
 
-tr:hover {
+.gerrie:hover {
     background: #f2f2f2;
 }
 
