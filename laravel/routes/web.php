@@ -35,10 +35,9 @@ Route::get('/login', function () {
     return view('login');
 });
     
-    Route::get('/finance', function () {
-        return view('finance');
-    });
-
+Route::get('/sales', function () {
+    return view('sales');
+});
 Route::get('/development', function () {
     return view('development');
 });
@@ -48,3 +47,7 @@ Route::get('/dev_start', function () {
 Route::get('/dev_finish', function () {
     return view('dev_finish');
 });
+Route::get('/finance', function () {
+    return view('finance');
+});
+
