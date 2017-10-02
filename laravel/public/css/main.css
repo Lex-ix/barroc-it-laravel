@@ -181,13 +181,8 @@ table {
 th {
     font-size: 20px;
     padding-right: 25px;
-    padding-left: 25px;
     padding-bottom: 10px;
 }
-
-/*td {*/
-    /*text-align: center;*/
-/*}*/
 
 .background .gerrie:hover {
     background: #fff;
@@ -276,4 +271,9 @@ nav a:hover, nav .active {
 
 .finance td {
     padding-right: 60px;
+}
+
+.tbl-finance{
+    display: flex;
+    justify-content: center;
 }
