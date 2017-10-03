@@ -11,9 +11,7 @@ require_once "nav.php";
                 <a href="dev_start" target="_blank" class="button">Start project</a>
             </div>
             <div class="finish">
-                <div class="container">
-                    <a href="dev_finish" target="_blank" class="button">Finish project</a>
-                </div>
+                <a href="dev_finish" target="_blank" class="button">Finish project</a>
             </div>
           </div>
     </div>

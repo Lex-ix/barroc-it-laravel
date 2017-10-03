@@ -301,3 +301,11 @@ nav a:hover, nav .active {
 
 /*==================DEVELOPMENT===============*/
 
+.projects {
+    display: flex;
+    flex-direction: row;
+}
+
+.projects a{
+    margin-right: 20px;
+}
