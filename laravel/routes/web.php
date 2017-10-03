@@ -55,4 +55,6 @@ Route::get('/finance', function () {
     return view('finance');
 });
 
-
+Route::get('/finance/invoice', function(){
+    return view('/invoice');
+});
