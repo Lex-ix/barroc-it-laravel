@@ -86,7 +86,7 @@ label, p {
     line-height: 1.42857143;
 }
 
-input {
+input,.button {
     background: rgba(0,0,0, 0);
 
     border-radius: 1px;
@@ -289,3 +289,6 @@ nav a:hover, nav .active {
 .pause-project {
     padding-top: 10px;
 }
+
+/*==================DEVELOPMENT===============*/
+
