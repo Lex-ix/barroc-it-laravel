@@ -3,17 +3,10 @@
     require_once ('nav.php');
 ?>
 
-<style>
-    table {
-        margin: 0 auto;
-
-    }
-</style>
-
 <div class="container">
     <h2 class="subhead">Sales</h2>
     <section>
-        <a href="add_customer">Add customer</a>
+        <a href="add_customer" class="button">Add customer</a>
     </section>
 
     <section>
@@ -293,6 +286,7 @@
         </div>
     </section>
 </div>
+
 <?php
     require_once ('footer.php')
 ?>

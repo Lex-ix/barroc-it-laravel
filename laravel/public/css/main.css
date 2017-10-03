@@ -86,15 +86,20 @@ label, p {
     line-height: 1.42857143;
 }
 
-input,.button {
+input, .button {
     background: rgba(0,0,0, 0);
 
-    border-radius: 1px;
-    border-color: rgba(0,0,0, 0.2);
-
     margin-bottom: 10px;
-
     padding: 5px;
+
+    border: 3px rgba(0,0,0, 0.2) solid;
+    border-radius: 3px;
+}
+
+.button:hover {
+    text-decoration: none;
+
+    background: rgba(0,0,0, 0.1);
 }
 
 .customer input{
@@ -186,6 +191,10 @@ th {
 
 tr {
     padding-right: 10px;
+}
+
+td {
+    padding-right: 15px;
 }
 
 .background .gerrie:hover {
