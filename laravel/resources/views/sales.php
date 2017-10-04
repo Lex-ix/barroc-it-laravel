@@ -30,7 +30,7 @@
 <div class="background">
     <div class="container">
         <h2 class="subhead">Customers</h2>
-        <section class="scroll">
+        <div class="scroll">
             <table>
                 <tr>
                     <th>ID</th>
@@ -153,7 +153,7 @@
                     <td>Lorem</td>
                 </tr>
             </table>
-        </section>
+        </div>
     </div>
 </div>
 
