@@ -98,7 +98,7 @@
             </div>
         </div>
     
-            <div class="tbl-finance">
+            <div class="tbl-finance scroll">
                 <table>
                     <tr>
                         <th>Company ID</th>
@@ -113,20 +113,6 @@
                         <th>E-mail</th>
                         <th>Fax Nr.</th>
                         <th>balance</th>
-                    </tr>
-                    <tr class="gerrie">
-                        <td>Thing 1</td>
-                        <td>Thing 2</td>
-                        <td>Thing 3</td>
-                        <td>Thing 4</td>
-                        <td>Thing 5</td>
-                        <td>Thing 6</td>
-                        <td>Thing 7</td>
-                        <td>Thing 8</td>
-                        <td>Thing 9</td>
-                        <td>Thing 10</td>
-                        <td>Thing 11</td>
-                        <td>Thing 12</td>
                     </tr>
                     <tr class="gerrie">
                         <td>Thing 1</td>

@@ -96,6 +96,23 @@ input, .button {
     border-radius: 3px;
 }
 
+textarea {
+    font-family: Arial;
+
+    resize: none;
+
+    background: rgba(0,0,0, 0);
+
+    margin-bottom: 10px;
+    padding: 5px;
+
+    border: 3px rgba(0,0,0, 0.2) solid;
+    border-radius: 3px;
+
+    height: 125px;
+    margin-right: 834px;
+}
+
 .button:hover {
     text-decoration: none;
 
@@ -297,6 +314,23 @@ nav a:hover, nav .active {
 
 .pause-project {
     padding-top: 10px;
+}
+
+/*===================INVOICE================*/
+
+.barroc_data {
+    display: flex;
+    justify-content: space-around;
+}
+
+.customer_data {
+    display: flex;
+    justify-content: space-around;
+}
+
+.project_data {
+    display: flex;
+    justify-content: space-around;
 }
 
 /*==================DEVELOPMENT===============*/
