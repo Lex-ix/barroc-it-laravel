@@ -63,10 +63,33 @@
                 <th>Address</th>
                 <td>$address</td>
             </tr>
-            
+            <tr>
+                <th>House number</th>
+                <td>$house_number</td>
+            </tr>
+            <tr>
+                <th>Residence</th>
+                <td>$residence</td>
+            </tr>
+            <tr>
+                <th>zip code</th>
+                <td>$zipcode</td>
+            </tr>
         </table>
+        
+        <div class="project_data">
+            <table>
+                <tr>
+                    <th>project name</th>
+                    <td>$project_name</td>
+                </tr>
+                <tr>
+                    <th>project description</th>
+                    <td>$project_description</td>
+                </tr>
+            </table>
+        </div>
     </div>
-    barroc it gegevens
     klant gegevens, naam, adres, huisnummer,woonplaats, postcode
     projectnaam, project beschrijving
 
