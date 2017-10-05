@@ -11,50 +11,56 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::resource('appaintments', 'appointmentsController');
+Route::resource('company', 'companiesController');
+Route::resource('invoice', 'invoicesController');
+Route::resource('projects', 'projectsController');
+Route::resource('user', 'usersController');
 
-Route::get('/add_customer', function () {
-    return view('add_customer');
-});
-
-Route::get('/change_customer', function () {
-    return view('change_customer');
-});
-
-Route::get('/help_en', function () {
-    return view('help_EN');
-});
-
-Route::get('/help_nl', function () {
-    return view('help_NL');
-});
-
-Route::get('/login', function () {
-    return view('login');
-});
-    
-Route::get('/sales', function () {
-    return view('sales');
-});
-
-Route::get('/development', function () {
-    return view('development');
-});
-
-Route::get('/dev_start', function () {
-    return view('dev_start');
-});
-
-Route::get('/dev_finish', function () {
-    return view('dev_finish');
-});
-
-Route::get('/finance', function () {
-    return view('finance');
-});
-
-Route::get('/finance/invoice', function(){
-    return view('/invoice');
-});
+//Route::get('/', function () {
+//    return view('index');
+//});
+//
+//Route::get('/add_customer', function () {
+//    return view('add_customer');
+//});
+//
+//Route::get('/change_customer', function () {
+//    return view('change_customer');
+//});
+//
+//Route::get('/help_en', function () {
+//    return view('help_EN');
+//});
+//
+//Route::get('/help_nl', function () {
+//    return view('help_NL');
+//});
+//
+//Route::get('/login', function () {
+//    return view('login');
+//});
+//
+//Route::get('/sales', function () {
+//    return view('sales');
+//});
+//
+//Route::get('/development', function () {
+//    return view('development');
+//});
+//
+//Route::get('/dev_start', function () {
+//    return view('dev_start');
+//});
+//
+//Route::get('/dev_finish', function () {
+//    return view('dev_finish');
+//});
+//
+//Route::get('/finance', function () {
+//    return view('finance');
+//});
+//
+//Route::get('/finance/invoice', function(){
+//    return view('/invoice');
+//});
