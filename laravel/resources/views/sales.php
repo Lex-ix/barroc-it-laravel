@@ -6,7 +6,7 @@
 <div class="container">
     <h2 class="subhead">Sales</h2>
     <section>
-        <a href="add_customer" class="button">Add customer</a>
+        <a href="user/create" class="button">Add customer</a>
     </section>
 
     <section>

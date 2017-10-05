@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class appointmentsController extends Controller
+class developmentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +13,7 @@ class appointmentsController extends Controller
      */
     public function index()
     {
-
+        return view('/development/development');
     }
 
     /**
@@ -23,7 +23,7 @@ class appointmentsController extends Controller
      */
     public function create()
     {
-        //
+        return view('/development/development_start');
     }
 
     /**
@@ -79,6 +79,6 @@ class appointmentsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        return view('/development/development_finish');
     }
 }

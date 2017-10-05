@@ -13,7 +13,7 @@ class usersController extends Controller
      */
     public function index()
     {
-        //
+
     }
 
     /**
@@ -23,7 +23,8 @@ class usersController extends Controller
      */
     public function create()
     {
-        //
+        return view('add_customer');
+
     }
 
     /**
@@ -34,7 +35,7 @@ class usersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
     }
 
     /**
@@ -45,7 +46,7 @@ class usersController extends Controller
      */
     public function show($id)
     {
-        //
+
     }
 
     /**
@@ -56,7 +57,7 @@ class usersController extends Controller
      */
     public function edit($id)
     {
-        //
+
     }
 
     /**
@@ -68,7 +69,7 @@ class usersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
     }
 
     /**
@@ -79,6 +80,6 @@ class usersController extends Controller
      */
     public function destroy($id)
     {
-        //
+
     }
 }

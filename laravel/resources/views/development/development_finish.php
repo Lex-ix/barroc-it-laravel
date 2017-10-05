@@ -1,13 +1,12 @@
 <?php
-require_once "header.php";
-require_once "nav.php";
+    require_once "../header.php";
+    require_once "../nav.php";
 ?>
 
-    <div class="customerstatus">
-        <div class="container">
-            <h1>Klant Status</h1>
-            <h2 class="subhead">Table</h2>
-            <div class="scroll">
+<div class="customerstatus">
+    <div class="container">
+        <h2 class="subhead">Gepauzeerde projecten</h2>
+        <div class="scroll">
             <table>
                 <tr>
                     <th>Thing 1 Lorem Ipsum</th>
@@ -64,14 +63,17 @@ require_once "nav.php";
                     <td>Thing 2</td>
                     <td>Thing 3</td>
                 </tr>
+                <tr>
+                    <td>Thing 1</td>
+                    <td>Thing 2</td>
+                    <td>Thing 3</td>
+                </tr>
             </table>
-            </div>
         </div>
-        </section>
     </div>
-
-    </div>
+</div>
 
 <?php
-require_once "footer.php";
+    require_once "../footer.php";
+?>
 
