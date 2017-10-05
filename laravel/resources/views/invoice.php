@@ -2,6 +2,7 @@
     require_once('header.php');
     require_once('nav.php');
 ?>
+
 <div class="container">
     <div class="invoice_info">
         <form action="" class="form-group">
@@ -51,11 +52,26 @@
             </div>
         </table>
     </div>
+    
+    <div class="customer_data">
+        <table>
+            <tr>
+                <th>Company name</th>
+                <td>$company_name</td>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td>$address</td>
+            </tr>
+            
+        </table>
+    </div>
     barroc it gegevens
     klant gegevens, naam, adres, huisnummer,woonplaats, postcode
     projectnaam, project beschrijving
 
 </div>
+
 <?php
     require_once('footer.php');
 ?>
