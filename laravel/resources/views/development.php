@@ -19,51 +19,79 @@ require_once "nav.php";
 <div class="customerstatus">
     <div class="container">
         <h2 class="subhead">client status</h2>
-        <table>
-            <tr>
-                <th>project_id</th>
-                <th>company_id</th>
-                <th>application_Desc</th>
-                <th>maintenance</th>
-                <th>operating_system</th>
-                <th>finished</th>
-                <th> hardware_desc</th>
+            <div class="scroll">
+                <table>
+                    <tr>
+                        <th>project_id</th>
+                        <th>company_id</th>
+                        <th>application_Desc</th>
+                        <th>maintenance</th>
+                        <th>operating_system</th>
+                        <th>finished</th>
+                        <th> hardware_desc</th>
 
-            </tr>
-            <tr>
-                <td>Thing 1</td>
-                <td>Thing 2</td>
-                <td>Thing 3</td>
-            </tr>
-            <tr>
-                <td>Thing 1</td>
-                <td>Thing 2</td>
-                <td>Thing 3</td>
-            </tr>
-            <tr>
-                <td>Thing 1</td>
-                <td>Thing 2</td>
-                <td>Thing 3</td>
-            </tr>
-            <tr>
-                <td>Thing 1</td>
-                <td>Thing 2</td>
-                <td>Thing 3</td>
-            </tr>
-            <tr>
-                <td>Thing 1</td>
-                <td>Thing 2</td>
-                <td>Thing 3</td>
-            </tr>
-        </table>
+                    </tr>
+                    <tr>
+                        <td>Thing 1</td>
+                        <td>Thing 2</td>
+                        <td>Thing 3</td>
+                    </tr>
+                    <tr>
+                        <td>Thing 1</td>
+                        <td>Thing 2</td>
+                        <td>Thing 3</td>
+                    </tr>
+                    <tr>
+                        <td>Thing 1</td>
+                        <td>Thing 2</td>
+                        <td>Thing 3</td>
+                    </tr>
+                    <tr>
+                        <td>Thing 1</td>
+                        <td>Thing 2</td>
+                        <td>Thing 3</td>
+                    </tr>
+                    <tr>
+                        <td>Thing 1</td>
+                        <td>Thing 2</td>
+                        <td>Thing 3</td>
+                    </tr>
+                    <tr>
+                        <td>Thing 1</td>
+                        <td>Thing 2</td>
+                        <td>Thing 3</td>
+                    </tr>
+                    <tr>
+                        <td>Thing 1</td>
+                        <td>Thing 2</td>
+                        <td>Thing 3</td>
+                    </tr>
+                    <tr>
+                        <td>Thing 1</td>
+                        <td>Thing 2</td>
+                        <td>Thing 3</td>
+                    </tr>
+                    <tr>
+                        <td>Thing 1</td>
+                        <td>Thing 2</td>
+                        <td>Thing 3</td>
+                    </tr>
+                    <tr>
+                        <td>Thing 1</td>
+                        <td>Thing 2</td>
+                        <td>Thing 3</td>
+                    </tr>
+                </table>
+            </div>
     </div>
-    </section>
+
 </div>
 
 </div>
 <div class="pausedstatus">
     <div class="container">
         <h2 class="subhead">paused projects</h2>
+        <div class="scroll">
         <table>
             <tr>
                 <th>project_id</th>
@@ -100,7 +128,28 @@ require_once "nav.php";
                 <td>Thing 2</td>
                 <td>Thing 3</td>
             </tr>
+            <tr>
+                <td>Thing 1</td>
+                <td>Thing 2</td>
+                <td>Thing 3</td>
+            </tr>
+            <tr>
+                <td>Thing 1</td>
+                <td>Thing 2</td>
+                <td>Thing 3</td>
+            </tr>
+            <tr>
+                <td>Thing 1</td>
+                <td>Thing 2</td>
+                <td>Thing 3</td>
+            </tr>
+            <tr>
+                <td>Thing 1</td>
+                <td>Thing 2</td>
+                <td>Thing 3</td>
+            </tr>
         </table>
+        </div>
     </div>
     </section>
 </div>
