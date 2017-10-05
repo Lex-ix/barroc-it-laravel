@@ -56,7 +56,7 @@
             </div>
             <div class="form-group">
                 <label for="comment">Comment:</label>
-                <input type="text" id="comment" placeholder="Enter your comment here.">
+                <textarea name="comment" id="comment" placeholder="Enter your comment here" cols="30" rows="10"></textarea>
             </div>
             <div class="form-group">
                 <input class="submit" type="submit" value="Add">
