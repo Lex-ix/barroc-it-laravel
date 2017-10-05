@@ -13,7 +13,7 @@ class usersController extends Controller
      */
     public function index()
     {
-
+    
     }
 
     /**

@@ -22,7 +22,7 @@
                     </td>
 
                     <td>
-                        <form action="/finance/invoice" class="form-group">
+                        <form action="finance/create" class="form-group">
                             <input type="submit" value="Invoeren factuur" href="/invoice.php">
                         </form>
                     </td>
@@ -45,7 +45,7 @@
                     </td>
 
                     <td>
-                        <form action="/finance/invoice" class="form-group">
+                        <form action="/finance/create" class="form-group">
                             <input type="submit" value="Invoeren factuur" href="/invoice.php">
                         </form>
                     </td>
@@ -68,7 +68,7 @@
                     </td>
 
                     <td>
-                        <form action="/finance/invoice" class="form-group">
+                        <form action="/finance/create" class="form-group">
                             <input type="submit" value="Invoeren factuur" href="/invoice.php">
                         </form>
                     </td>
