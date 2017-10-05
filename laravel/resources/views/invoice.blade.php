@@ -1,7 +1,5 @@
-<?php
-    require_once('header.php');
-    require_once('nav.php');
-?>
+@include('/partials/header')
+@include('/partials/nav')
 
 <div class="container">
     <h2 class="subhead">Invoice Information</h2>
@@ -120,6 +118,4 @@
     </div>
 </div>
 
-<?php
-    require_once('footer.php');
-?>
+@include('/partials/footer')

@@ -1,11 +1,9 @@
-<?php
-    require_once "../header.php";
-    require_once "../nav.php";
-?>
+@include('/partials/header')
+@include('/partials/nav')
 
 <div class="customerstatus">
     <div class="container">
-        <h2 class="subhead">Gepauzeerde projecten</h2>
+        <h2 class="subhead">Klant status</h2>
         <div class="scroll">
             <table>
                 <tr>
@@ -63,17 +61,9 @@
                     <td>Thing 2</td>
                     <td>Thing 3</td>
                 </tr>
-                <tr>
-                    <td>Thing 1</td>
-                    <td>Thing 2</td>
-                    <td>Thing 3</td>
-                </tr>
             </table>
         </div>
     </div>
 </div>
 
-<?php
-    require_once "../footer.php";
-?>
-
+@include('/partials/footer')

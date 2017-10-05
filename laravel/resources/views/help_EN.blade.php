@@ -1,6 +1,4 @@
-<?php
-    require_once ('header.php');
-?>
+@include('/partials/header')
 
 <section>
     <div class="container">
@@ -12,6 +10,4 @@
     </div>
 </section>
 
-<?php
-    require_once ('footer.php');
-?>
+@include('/partials/footer')

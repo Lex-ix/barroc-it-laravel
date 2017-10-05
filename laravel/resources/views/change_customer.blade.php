@@ -1,8 +1,5 @@
-<?php
-require_once ('header.php');
-require_once ('nav.php');
-
-?>
+@include('/partials/header')
+@include('/partials/nav')
 
 <section>
     <div class="container customer">
@@ -65,7 +62,4 @@ require_once ('nav.php');
     </div>
 </section>
 
-<?php
-require_once ('footer.php');
-
-?>
+@include('/partials/footer')
