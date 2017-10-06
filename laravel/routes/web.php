@@ -11,7 +11,7 @@
 |
 */
 
-Route::resource('appaintments', 'appointmentsController');
+Route::resource('appointments', 'appointmentsController');
 Route::resource('company', 'companiesController');
 Route::resource('invoice', 'invoicesController');
 Route::resource('projects', 'projectsController');

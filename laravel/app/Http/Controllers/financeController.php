@@ -23,7 +23,7 @@ class financeController extends Controller
      */
     public function create()
     {
-        //
+        return view('invoice');
     }
 
     /**
