@@ -6,7 +6,7 @@
     <div class="invoice_info">
         <form action="" class="form-group">
             <label for="invoice_nr">Invoice Nr</label>
-            <input type="text" name="invoice_nr" id="invoice_nr" value="Invoice ID" disabled>
+            <input type="text" name="invoice_nr" id="invoice_nr" value="project ID" disabled>
             <label for="company_id">Customer ID</label>
             <input type="text" name="company_id" id="company_id" value="Klant ID" disabled>
             <label for="company_name">Company name</label>
