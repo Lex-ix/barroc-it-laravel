@@ -23,7 +23,12 @@ class developmentController extends Controller
      */
     public function create()
     {
-        return view('/development/development_start');
+        return view('development/development_start');
+    }
+
+    public function finish()
+    {
+      //
     }
 
     /**
@@ -68,7 +73,7 @@ class developmentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        return view('development/development_finish');
     }
 
     /**
@@ -79,6 +84,6 @@ class developmentController extends Controller
      */
     public function destroy($id)
     {
-        return view('/development/development_finish');
+
     }
 }

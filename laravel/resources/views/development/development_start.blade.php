@@ -12,54 +12,64 @@
                     <th>Thing 3 Lorem Ipsum</th>
                 </tr>
                 <tr>
-                    <td>Thing 1</td>
+                    <td>Thing 1</td> 
                     <td>Thing 2</td>
                     <td>Thing 3</td>
+                    <td><input type="submit" value="Start Project"></td>
                 </tr>
                 <tr>
                     <td>Thing 1</td>
                     <td>Thing 2</td>
                     <td>Thing 3</td>
+                    <td><input type="submit" value="Start Project"></td>
                 </tr>
                 <tr>
                     <td>Thing 1</td>
                     <td>Thing 2</td>
                     <td>Thing 3</td>
+                    <td><input type="submit" value="Start Project"></td>
                 </tr>
                 <tr>
                     <td>Thing 1</td>
                     <td>Thing 2</td>
                     <td>Thing 3</td>
+                    <td><input type="submit" value="Start Project"></td>
                 </tr>
                 <tr>
                     <td>Thing 1</td>
                     <td>Thing 2</td>
                     <td>Thing 3</td>
+                    <td><input type="submit" value="Start Project"></td>
                 </tr>
                 <tr>
                     <td>Thing 1</td>
                     <td>Thing 2</td>
                     <td>Thing 3</td>
+                    <td><input type="submit" value="Start Project"></td>
                 </tr>
                 <tr>
                     <td>Thing 1</td>
                     <td>Thing 2</td>
                     <td>Thing 3</td>
+                    <td><input type="submit" value="Start Project"></td>
                 </tr>
                 <tr>
                     <td>Thing 1</td>
                     <td>Thing 2</td>
                     <td>Thing 3</td>
+                    <td><input type="submit" value="Start Project"></td>
                 </tr>
                 <tr>
                     <td>Thing 1</td>
                     <td>Thing 2</td>
                     <td>Thing 3</td>
+                    <td><input type="submit" value="Start Project"></td>
                 </tr>
                 <tr>
                     <td>Thing 1</td>
                     <td>Thing 2</td>
                     <td>Thing 3</td>
+                    <td><input type="submit" value="Start Project"></td>
                 </tr>
             </table>
         </div>

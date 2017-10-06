@@ -6,10 +6,10 @@
         <h2 class="subhead"> Development Home Scherm</h2>
         <div class="projects">
             <div class="start">
-                <a href="dev_start" target="_blank" class="button">Start project</a>
+                <a href="development/create" target="_blank" class="button">Start project</a>
             </div>
             <div class="finish">
-                <a href="dev_finish" target="_blank" class="button">Finish project</a>
+                <a href="development/update" target="_blank" class="button">Finish project</a>
             </div>
         </div>
     </div>
