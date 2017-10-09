@@ -7,8 +7,7 @@
             <table class="finance">
                 <tr>
                     <td>company_name</td>
-                    <td>
-                        <form action="">
+                    <td><form action="">
                             <input type="submit" value="-">
                         </form>
                     </td>
@@ -93,7 +92,7 @@
             </div>
         </div>
     
-            <div class="tbl-finance scroll">
+            <div class="tbl-center scroll">
                 <table>
                     <tr>
                         <th>Company ID</th>
@@ -109,62 +108,22 @@
                         <th>Fax Nr.</th>
                         <th>balance</th>
                     </tr>
-                    <tr class="gerrie">
-                        <td>Thing 1</td>
-                        <td>Thing 2</td>
-                        <td>Thing 3</td>
-                        <td>Thing 4</td>
-                        <td>Thing 5</td>
-                        <td>Thing 6</td>
-                        <td>Thing 7</td>
-                        <td>Thing 8</td>
-                        <td>Thing 9</td>
-                        <td>Thing 10</td>
-                        <td>Thing 11</td>
-                        <td>Thing 12</td>
+                    @foreach($companies as $company)
+                    <tr>
+                        <td>{{ $company->company_id }}</td>
+                        <td>{{ $company->name}}</td>
+                        <td>{{ $company->last_name }}</td>
+                        <td>{{ $company->initials }}</td>
+                        <td>{{ $company->company_name }}</td>
+                        <td>{{ $company->unpaid_invoices }}</td>
+                        <td>{{ $company->bank_account_number }}</td>
+                        <td>{{ $company->vat_number }}</td>
+                        <td>{{ $company->ledger_number }}</td>
+                        <td>{{ $company->email }}</td>
+                        <td>{{ $company->fax_number }}</td>
+                        <td>{{ $company->balance }}</td>
                     </tr>
-                    <tr class="gerrie">
-                        <td>Thing 1</td>
-                        <td>Thing 2</td>
-                        <td>Thing 3</td>
-                        <td>Thing 4</td>
-                        <td>Thing 5</td>
-                        <td>Thing 6</td>
-                        <td>Thing 7</td>
-                        <td>Thing 8</td>
-                        <td>Thing 9</td>
-                        <td>Thing 10</td>
-                        <td>Thing 11</td>
-                        <td>Thing 12</td>
-                    </tr>
-                    <tr class="gerrie">
-                        <td>Thing 1</td>
-                        <td>Thing 2</td>
-                        <td>Thing 3</td>
-                        <td>Thing 4</td>
-                        <td>Thing 5</td>
-                        <td>Thing 6</td>
-                        <td>Thing 7</td>
-                        <td>Thing 8</td>
-                        <td>Thing 9</td>
-                        <td>Thing 10</td>
-                        <td>Thing 11</td>
-                        <td>Thing 12</td>
-                    </tr>
-                    <tr class="gerrie">
-                        <td>Thing 1</td>
-                        <td>Thing 2</td>
-                        <td>Thing 3</td>
-                        <td>Thing 4</td>
-                        <td>Thing 5</td>
-                        <td>Thing 6</td>
-                        <td>Thing 7</td>
-                        <td>Thing 8</td>
-                        <td>Thing 9</td>
-                        <td>Thing 10</td>
-                        <td>Thing 11</td>
-                        <td>Thing 12</td>
-                    </tr>
+                    @endforeach
                 </table>
             </div>
         </div>
