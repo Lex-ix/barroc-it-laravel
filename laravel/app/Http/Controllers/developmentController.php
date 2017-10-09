@@ -50,7 +50,7 @@ class developmentController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('development/development_finish');
     }
 
     /**
@@ -73,7 +73,7 @@ class developmentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        return view('development/development_finish');
+        //
     }
 
     /**
@@ -84,6 +84,6 @@ class developmentController extends Controller
      */
     public function destroy($id)
     {
-
+        //
     }
 }

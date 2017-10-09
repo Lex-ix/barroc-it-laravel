@@ -9,12 +9,12 @@
                 <a href="development/create" target="_blank" class="button">Start project</a>
             </div>
             <div class="finish">
-                <a href="development/update" target="_blank" class="button">Finish project</a>
+                <a href="development/show" target="_blank" class="button">Finish project</a>
             </div>
         </div>
     </div>
 </div>
-
+<div class="background">
 <div class="customerstatus">
     <div class="container">
         <h2 class="subhead">client status</h2>
@@ -112,6 +112,7 @@
             </table>
         </div>
     </div>
+</div>
 </div>
 
 <div class="pausedstatus">
