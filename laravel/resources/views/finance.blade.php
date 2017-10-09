@@ -92,7 +92,7 @@
             </div>
         </div>
     
-            <div class="tbl-finance scroll">
+            <div class="tbl-center scroll">
                 <table>
                     <tr>
                         <th>Company ID</th>
