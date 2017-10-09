@@ -11,6 +11,10 @@
 |
 */
 
+route::get('/' , function(){
+    return view('login');
+});
+
 Route::resource('appointments', 'appointmentsController');
 Route::resource('company', 'companiesController');
 Route::resource('invoice', 'invoicesController');
