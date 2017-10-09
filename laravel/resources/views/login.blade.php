@@ -26,7 +26,7 @@
             </div>
         </form>
         <div class="help">
-            <a href="help_EN.blade.php" target="_blank">help</a>
+            <a href="/help_en" target="_blank">help</a>
         </div>
     </div>
 
