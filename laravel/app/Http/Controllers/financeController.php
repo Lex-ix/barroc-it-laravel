@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Invoice;
 use Illuminate\Http\Request;
 
 class financeController extends Controller
@@ -13,7 +14,8 @@ class financeController extends Controller
      */
     public function index()
     {
-        return view('/finance');
+        $invoices = \App\Invoice::all();
+        return view('/finance')->with('invoices', $invoices);
     }
 
     /**
@@ -34,7 +36,7 @@ class financeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+    
     }
 
     /**
