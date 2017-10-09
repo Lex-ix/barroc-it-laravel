@@ -3,7 +3,7 @@
 
 <div class="customerstatus">
     <div class="container">
-        <h2 class="subhead">Gepauzeerde projecten</h2>
+        <h2 class="subhead">Active projects</h2>
         <div class="scroll">
             <table>
                 <tr>
@@ -15,56 +15,67 @@
                     <td>Thing 1</td>
                     <td>Thing 2</td>
                     <td>Thing 3</td>
+                    <td><input type="submit" value="Finish Project" class="button"></td>
                 </tr>
                 <tr>
                     <td>Thing 1</td>
                     <td>Thing 2</td>
                     <td>Thing 3</td>
+                    <td><input type="submit" value="Finish Project" class="button"></td>
                 </tr>
                 <tr>
                     <td>Thing 1</td>
                     <td>Thing 2</td>
                     <td>Thing 3</td>
+                    <td><input type="submit" value="Finish Project" class="button"></td>
                 </tr>
                 <tr>
                     <td>Thing 1</td>
                     <td>Thing 2</td>
                     <td>Thing 3</td>
+                    <td><input type="submit" value="Finish Project" class="button"></td>
                 </tr>
                 <tr>
                     <td>Thing 1</td>
                     <td>Thing 2</td>
                     <td>Thing 3</td>
+                    <td><input type="submit" value="Finish Project" class="button"></td>
                 </tr>
                 <tr>
                     <td>Thing 1</td>
                     <td>Thing 2</td>
                     <td>Thing 3</td>
+                    <td><input type="submit" value="Finish Project" class="button"></td>
                 </tr>
                 <tr>
                     <td>Thing 1</td>
                     <td>Thing 2</td>
                     <td>Thing 3</td>
+                    <td><input type="submit" value="Finish Project" class="button"></td>
                 </tr>
                 <tr>
                     <td>Thing 1</td>
                     <td>Thing 2</td>
                     <td>Thing 3</td>
+                    <td><input type="submit" value="Finish Project" class="button"></td>
                 </tr>
                 <tr>
                     <td>Thing 1</td>
                     <td>Thing 2</td>
                     <td>Thing 3</td>
+                    <td><input type="submit" value="Finish Project" class="button"></td>
                 </tr>
                 <tr>
                     <td>Thing 1</td>
                     <td>Thing 2</td>
                     <td>Thing 3</td>
+                    <td><input type="submit" value="Finish Project" class="button"></td>
                 </tr>
                 <tr>
                     <td>Thing 1</td>
                     <td>Thing 2</td>
                     <td>Thing 3</td>
+                    <td><input type="submit" value="Finish Project" class="button"></td>
                 </tr>
             </table>
         </div>
