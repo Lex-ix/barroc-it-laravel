@@ -22,7 +22,7 @@
                     </td>
 
                     <td>
-                        <form action="finance/create" class="form-group">
+                        <form action="/finance/create" class="form-group">
                             <input type="submit" value="Invoeren factuur" href="/invoice.php">
                         </form>
                     </td>
@@ -84,12 +84,9 @@
                 <select name="customer" id="customer">
                     <option value="">Select</option>
                     <option value="">------------</option>
-                    
-                    <option value="">498465</option>
-                    <option value="">61651615</option>
-                    <option value="">61516</option>
-                    <option value="">84561</option>
-                    <option value="">16541</option>
+                    @foreach($invoices as $invoice)
+                        <option value="">{{ $invoice->project_id }}</option>
+                        @endforeach
                 </select>
                 <input type="submit" value="Request information">
             </form>

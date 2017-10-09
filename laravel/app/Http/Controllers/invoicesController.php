@@ -13,7 +13,8 @@ class invoicesController extends Controller
      */
     public function index()
     {
-        return view('finance/invoice');
+        $invoices = \App\Invoice::all();
+        return view('/finance/invoice')->with('invoices', $invoices);
     }
 
     /**
@@ -34,7 +35,11 @@ class invoicesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $invoice = new \App\Invoice();
+        $invoice->project_id = $request->project_id;
+        $invoice->date = $request->date;
+        $invoice->quantity = $request->quantity;
+        $invoice->amount = $request->amount;
     }
 
     /**
