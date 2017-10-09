@@ -15,6 +15,14 @@ route::get('/' , function(){
     return view('login');
 });
 
+route::get('/help_en' , function(){
+    return view('help_EN');
+});
+
+route::get('/help_nl' , function(){
+    return view('help_NL');
+});
+
 Route::resource('appointments', 'appointmentsController');
 Route::resource('company', 'companiesController');
 Route::resource('invoice', 'invoicesController');
