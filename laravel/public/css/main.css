@@ -199,7 +199,7 @@ table {
 
 .scroll {
     overflow-y: auto;
-    max-height: 200px;
+    max-height: 300px;
 
     margin-bottom: 15px;
 }
@@ -233,7 +233,6 @@ nav {
 
 .submit:hover {
     cursor: pointer;
-    background: rgba(255,255,255, 0.2);
 }
 
 footer {
@@ -256,6 +255,15 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+select {
+    min-width: 65px;
+}
+
+.tbl-center{
+    display: flex;
+    justify-content: center;
 }
 
 /*
@@ -307,10 +315,7 @@ nav a:hover, nav .active {
     padding-right: 60px;
 }
 
-.tbl-finance{
-    display: flex;
-    justify-content: center;
-}
+
 
 .request-info {
     padding-top: 10px;

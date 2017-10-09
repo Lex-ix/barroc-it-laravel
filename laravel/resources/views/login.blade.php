@@ -29,6 +29,5 @@
             <a href="/help_en" target="_blank">help</a>
         </div>
     </div>
-
 </body>
 </html>

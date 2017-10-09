@@ -11,13 +11,9 @@
         <form action="">
             <label for="customer">Customer ID:</label>
             <select name="customer" id="customer">
-                <option value="">42134</option>
-                <option value="">1345423</option>
-                <option value="">5145432</option>
-                <option value="">3412</option>
-                <option value="">542</option>
-                <option value="">643214</option>
-                <option value="">614</option>
+                @foreach($companies as $company)
+                    <option value="{{ $company->company_id }}">{{ $company->company_id }}</option>
+                @endforeach
             </select>
             <input type="submit" value="Edit customer">
             <input type="submit" value="Delete customer">
@@ -25,141 +21,17 @@
     </section>
 </div>
 
-<div class="background">
+<section class="background">
     <div class="container">
-        <h2 class="subhead">Customers</h2>
-        <div class="scroll">
-            <table>
-                <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Company</th>
-                    <th>Phone</th>
-                    <th>Establishment</th>
-                    <th>Zip code</th>
-                    <th>E-mail</th>
-                    <th>Project</th>
-                </tr>
-                <tr class="gerrie">
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                </tr>
-                <tr class="gerrie">
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                </tr>
-                <tr class="gerrie">
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                </tr>
-                <tr class="gerrie">
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                </tr>
-                <tr class="gerrie">
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                </tr>
-                <tr class="gerrie">
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                </tr>
-                <tr class="gerrie">
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                </tr>
-                <tr class="gerrie">
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                </tr>
-                <tr class="gerrie">
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                </tr>
-                <tr class="gerrie">
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                </tr>
-                <tr class="gerrie">
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                    <td>Lorem</td>
-                </tr>
-            </table>
-        </div>
+        <section>
+            <h2 class="subhead">Customers not in debt</h2>
+        </section>
     </div>
-</div>
+</section>
 
-<div class="container">
-    <section>
-        <h2 class="subhead">Customers in debt</h2>
-        <div class="scroll">
-            <table>
+<section class="background">
+    <div class="tbl-center scroll">
+        <table>
             <tr>
                 <th>ID</th>
                 <th>Name</th>
@@ -168,121 +40,63 @@
                 <th>Establishment</th>
                 <th>Zip code</th>
                 <th>E-mail</th>
-                <th>Project</th>
+                <th>maximum</th>
+                <th>balance</th>
             </tr>
-            <tr class="gerrie">
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-            </tr>
-            <tr class="gerrie">
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-            </tr>
-            <tr class="gerrie">
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-            </tr>
-            <tr class="gerrie">
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-            </tr>
-            <tr class="gerrie">
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-            </tr>
-            <tr class="gerrie">
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-            </tr>
-            <tr class="gerrie">
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-            </tr>
-            <tr class="gerrie">
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-            </tr>
-            <tr class="gerrie">
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-            </tr>
-            <tr class="gerrie">
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-            </tr>
-            <tr class="gerrie">
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-                <td>Lorem</td>
-            </tr>
+            @foreach ($companies as $company)
+                @if ($company->balance <= $company->maximum)
+                    <tr class="gerrie">
+                        <td>{{ $company->company_id }}</td>
+                        <td>{{ $company->last_name }}, {{ $company->name }}</td>
+                        <td>{{ $company->company_name }}</td>
+                        <td>{{ $company->phone_number }}</td>
+                        <td>{{ $company->residence }}</td>
+                        <td>{{ $company->zipcode }}</td>
+                        <td>{{ $company->email }}</td>
+                        <td>{{ $company->maximum }}</td>
+                        <td>{{ $company->balance }}</td>
+                    </tr>
+                @endif
+            @endforeach
         </table>
-        </div>
+    </div>
+</section>
+
+<div class="container">
+    <section>
+        <h2 class="subhead">Customers in debt</h2>
     </section>
+</div>
+
+<div class="tbl-center scroll">
+    <table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Company</th>
+        <th>Phone</th>
+        <th>Establishment</th>
+        <th>Zip code</th>
+        <th>E-mail</th>
+        <th>maximum</th>
+        <th>balance</th>
+    </tr>
+    @foreach ($companies as $company)
+        @if ($company->balance > $company->maximum)
+            <tr class="gerrie">
+                <td>{{ $company->company_id }}</td>
+                <td>{{ $company->last_name }}, {{ $company->name }}</td>
+                <td>{{ $company->company_name }}</td>
+                <td>{{ $company->phone_number }}</td>
+                <td>{{ $company->residence }}</td>
+                <td>{{ $company->zipcode }}</td>
+                <td>{{ $company->email }}</td>
+                <td>{{ $company->maximum }}</td>
+                <td>{{ $company->balance }}</td>
+            </tr>
+        @endif
+    @endforeach
+    </table>
 </div>
 
 @include('/partials/footer')
