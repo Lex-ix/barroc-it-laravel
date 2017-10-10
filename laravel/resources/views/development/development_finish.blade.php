@@ -7,76 +7,26 @@
         <div class="scroll">
             <table>
                 <tr>
-                    <th>Thing 1 Lorem Ipsum</th>
-                    <th>Thing 2 Lorem Ipsum</th>
-                    <th>Thing 3 Lorem Ipsum</th>
+                    <th>project_id</th>
+                    <th>company_id</th>
+                    <th>application_Desc</th>
+                    <th>maintenance</th>
+                    <th>operating_system</th>
+                    <th>finished</th>
+                    <th> hardware_desc</th>
                 </tr>
-                <tr>
-                    <td>Thing 1</td>
-                    <td>Thing 2</td>
-                    <td>Thing 3</td>
-                    <td><input type="submit" value="Finish Project" class="button"></td>
-                </tr>
-                <tr>
-                    <td>Thing 1</td>
-                    <td>Thing 2</td>
-                    <td>Thing 3</td>
-                    <td><input type="submit" value="Finish Project" class="button"></td>
-                </tr>
-                <tr>
-                    <td>Thing 1</td>
-                    <td>Thing 2</td>
-                    <td>Thing 3</td>
-                    <td><input type="submit" value="Finish Project" class="button"></td>
-                </tr>
-                <tr>
-                    <td>Thing 1</td>
-                    <td>Thing 2</td>
-                    <td>Thing 3</td>
-                    <td><input type="submit" value="Finish Project" class="button"></td>
-                </tr>
-                <tr>
-                    <td>Thing 1</td>
-                    <td>Thing 2</td>
-                    <td>Thing 3</td>
-                    <td><input type="submit" value="Finish Project" class="button"></td>
-                </tr>
-                <tr>
-                    <td>Thing 1</td>
-                    <td>Thing 2</td>
-                    <td>Thing 3</td>
-                    <td><input type="submit" value="Finish Project" class="button"></td>
-                </tr>
-                <tr>
-                    <td>Thing 1</td>
-                    <td>Thing 2</td>
-                    <td>Thing 3</td>
-                    <td><input type="submit" value="Finish Project" class="button"></td>
-                </tr>
-                <tr>
-                    <td>Thing 1</td>
-                    <td>Thing 2</td>
-                    <td>Thing 3</td>
-                    <td><input type="submit" value="Finish Project" class="button"></td>
-                </tr>
-                <tr>
-                    <td>Thing 1</td>
-                    <td>Thing 2</td>
-                    <td>Thing 3</td>
-                    <td><input type="submit" value="Finish Project" class="button"></td>
-                </tr>
-                <tr>
-                    <td>Thing 1</td>
-                    <td>Thing 2</td>
-                    <td>Thing 3</td>
-                    <td><input type="submit" value="Finish Project" class="button"></td>
-                </tr>
-                <tr>
-                    <td>Thing 1</td>
-                    <td>Thing 2</td>
-                    <td>Thing 3</td>
-                    <td><input type="submit" value="Finish Project" class="button"></td>
-                </tr>
+                @foreach($projects as $project)
+                    <tr>
+                        <td>{{ $project->project_id }}</td>
+                        <td>{{ $project->company_id }}</td>
+                        <td>{{ $project->application_desc }}</td>
+                        <td>{{ $project->maintenance }}</td>
+                        <td>{{ $project->operating_system }}</td>
+                        <td>{{ $project->finished }}</td>
+                        <td>{{ $project->hardware_desc }}</td>
+                        <td><input type="submit" value="Finish Project" class="button"></td>
+                    </tr>
+                @endforeach
             </table>
         </div>
     </div>
