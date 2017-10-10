@@ -12,7 +12,7 @@
 */
 
 route::get('/' , function(){
-    return view('login');
+    return view('auth/login');
 });
 
 route::get('/help_en' , function(){

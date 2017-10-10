@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="login">
+<html lang="en" class="login-background">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -9,50 +9,44 @@
     <link rel="stylesheet" type="text/css" href="../css/main.css">
 </head>
 <body>
-<div class="center">
-    <h2 class="tac subhead">Login</h2>
+<div class="login">
+    <div class="center">
+        <h2 class="tac subhead">Login</h2>
 
-    <form method="POST" action="{{ route('login') }}">
-        {{ csrf_field() }}
+        <form method="POST" action="{{ route('login') }}">
+            {{ csrf_field() }}
 
-        <div>
-            <label for="username" class="subhead">Username:</label>
-            <input id="username" type="text" name="username" required autofocus>
-            @if ($errors->has('email'))
-                <span class="help-block">
+            <div>
+                <label for="username" class="subhead">Username:</label>
+                <input id="username" type="text" name="username" required autofocus>
+                @if ($errors->has('email'))
+                    <span class="help-block">
                     <strong>{{ $errors->first('email') }}</strong>
                 </span>
-            @endif
-        </div>
+                @endif
+            </div>
 
-        <div>
-            <label for="password" class="subhead">Password:</label>
-            <input id="password" type="password" name="password" required>
-            @if ($errors->has('password'))
-                <span class="help-block">
+            <div>
+                <label for="password" class="subhead">Password:</label>
+                <input id="password" type="password" name="password" required>
+                @if ($errors->has('password'))
+                    <span class="help-block">
                     <strong>{{ $errors->first('password') }}</strong>
                 </span>
-            @endif
-        </div>
+                @endif
+            </div>
 
-        <div>
-            <label>
-                <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
-            </label>
-        </div>
+            <div>
+                <label class="subhead left">
+                    <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}>Remember Me
+                </label>
+            </div>
 
-        <div>
-            <input type="submit" class="submit subhead" value="Login">
-        </div>
-    </form>
-
-    @guest
-        <a href="{{ route('register') }}" class="left">Register</a>
-    @endif
-
-    <a class="right" href="{{ route('password.request') }}">
-        Forgot Your Password?
-    </a>
+            <div>
+                <input type="submit" class="submit subhead" value="Login">
+            </div>
+        </form>
+    </div>
 </div>
 </body>
 </html>
