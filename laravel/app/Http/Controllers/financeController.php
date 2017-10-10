@@ -2,11 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Appointment;
 use \App\Company;
 use \App\Invoice;
-use App\Project;
-use App\User;
 use Illuminate\Http\Request;
 use Faker\Factory;
 use phpDocumentor\Reflection\Types\Null_;
@@ -32,33 +29,9 @@ class financeController extends Controller
     public function create()
     {
 //        $faker = Factory::create();
-
-//        for( $x = 0 ; $x <= 2;$x++)
+//
+//        for( $x = 0 ; $x <= 30;$x++)
 //        {
-            //====================USERS FAKER===================\\
-//            $admin = new User();
-//            $admin->username = $faker->userName;
-//            $admin->password = $faker->password;
-            
-            //====================PROJECT FAKER=================\\
-//            $admin = new Project();
-//            $admin->company_id = $faker->numberBetween($min = 1, $max = 28);
-//            $admin->application_desc = $faker->text($maxNbChars = 200);
-//            $admin->maintenance = $faker->numberBetween($min = 0, $max = 1);
-//            $admin->operating_system = $faker->word;
-//            $admin->finished = $faker->numberBetween($min = 0, $max = 1);
-//            $admin->hardware_desc = $faker->text($maxNbChars = 200);
-            
-            //====================INVOICE FAKER================\\
-//            $admin = new Invoice();
-//            $admin->quantity = $faker->numberBetween($min = 100, $max = 1000);
-//            $admin->amount = $faker->numberBetween($min = 100, $max = 1000);
-            
-            //=====================APPOINTMENT FAKER============\\
-//            $admin = new Appointment();
-//            $admin->appointment_desc = $faker->text($maxNbChars = 200);
-            
-            //=====================COMPANY FAKER================\\
 //            $admin = new Company();
 //            $admin->company_name = $faker->company;
 //            $admin->residence = $faker->city;
@@ -84,8 +57,6 @@ class financeController extends Controller
 //            $admin->last_name = $faker->lastName;
 //            $admin->initials = $faker->randomLetter;
 //            $admin->bcr_control = $faker->randomNumber($nbDigits = Null, $strict = false);
-            
-            //=====================SAVE========================\\
 //            $admin->save();
 //        }
         return view('invoice');
