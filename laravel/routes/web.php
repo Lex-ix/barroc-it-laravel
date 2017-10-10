@@ -32,3 +32,7 @@ Route::resource('user', 'usersController');
 Route::resource('sales', 'salesController');
 Route::resource('finance', 'financeController');
 Route::resource('development', 'developmentController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
