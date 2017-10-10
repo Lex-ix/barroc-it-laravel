@@ -1,4 +1,6 @@
-/*==================FONT=FACE===============*/
+/*
+    ADDING FONT FACES
+*/
 
 @font-face {
     font-family: 'Helvetica-Normal';
@@ -12,7 +14,9 @@
 
 }
 
-/*==================GLOBAL=STYLING===============*/
+/*
+    GLOBAL STYLING
+*/
 
 * {
     margin: 0;
@@ -30,6 +34,14 @@
 
     padding-top:    180px;
     padding-bottom: 200px;
+}
+
+.login {
+    background: url(../images/background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 h1, h2, h3 {
@@ -166,7 +178,19 @@ section {
     text-align: center;
 }
 
+.center {
+    height: 275px;
+    width: 450px;
+    background: rgba(0,0,0, 0.5);
 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -137.5px;
+    margin-left: -225px;
+
+    border-radius: 7.45px;
+}
 
 table {
     font-family: 'Helvetica-Normal';
@@ -215,7 +239,19 @@ footer {
     padding-bottom: 15px;
 }
 
+.login .right {
+    position: absolute;
 
+    right: 15px;
+    bottom: 10px;
+}
+
+.login .left {
+     position: absolute;
+
+     left: 15px;
+     bottom: 10px;
+}
 
 .jcsa {
     display: flex;
@@ -243,20 +279,9 @@ select {
     justify-content: center;
 }
 
-/*==================LOGIN=/=REGISTER===============*/
-
-.login .center {
-    background: rgba(0,0,0, 0.5);
-
-    margin: auto;
-    padding: 0 35px;
-
-    border-radius: 7.45px;
-}
-
-.login{
-    display: flex;
-}
+/*
+    LOGIN
+*/
 
 .login .title {
     padding-top: 140px;
@@ -275,29 +300,9 @@ select {
     border-radius: 5px;
 }
 
-.login .right {
-    position: absolute;
-
-    right: 15px;
-    bottom: 10px;
-}
-
-.login .left {
-    position: relative;
-
-    left: 15px;
-    bottom: 0;
-}
-
-.login-background {
-    background: url(../images/background.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-/*===================NAV================*/
+/*
+    NAV
+*/
 
 nav a {
     text-decoration: none;
@@ -367,5 +372,3 @@ nav a:hover, nav .active {
     margin-right: 20px;
 
 }
-
-
