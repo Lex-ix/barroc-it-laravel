@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Company;
+use Faker\Factory;
 use Illuminate\Http\Request;
 
 class salesController extends Controller
@@ -13,8 +15,9 @@ class salesController extends Controller
      */
     public function index()
     {
-        return view('sales');
+        $companies = \App\Company::All();
 
+        return view('sales')->with('companies', $companies);
     }
 
     /**
@@ -24,7 +27,7 @@ class salesController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**

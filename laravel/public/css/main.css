@@ -179,15 +179,15 @@ section {
 }
 
 .center {
-    height: 250px;
-    width: 400px;
+    height: 275px;
+    width: 450px;
     background: rgba(0,0,0, 0.5);
 
     position: fixed;
     top: 50%;
     left: 50%;
-    margin-top: -175px;
-    margin-left: -200px;
+    margin-top: -137.5px;
+    margin-left: -225px;
 
     border-radius: 7.45px;
 }
@@ -199,7 +199,7 @@ table {
 
 .scroll {
     overflow-y: auto;
-    max-height: 200px;
+    max-height: 300px;
 
     margin-bottom: 15px;
 }
@@ -233,18 +233,30 @@ nav {
 
 .submit:hover {
     cursor: pointer;
-    background: rgba(255,255,255, 0.2);
 }
 
 footer {
     padding-bottom: 15px;
 }
 
-.help {
+.login .right {
     position: absolute;
 
     right: 15px;
     bottom: 10px;
+}
+
+.login .left {
+     position: absolute;
+
+     left: 15px;
+     bottom: 10px;
+}
+
+.jcsa {
+    display: flex;
+
+    justify-content: space-around;
 }
 
 a {
@@ -256,6 +268,15 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+select {
+    min-width: 65px;
+}
+
+.tbl-center{
+    display: flex;
+    justify-content: center;
 }
 
 /*
@@ -307,10 +328,7 @@ nav a:hover, nav .active {
     padding-right: 60px;
 }
 
-.tbl-finance{
-    display: flex;
-    justify-content: center;
-}
+
 
 .request-info {
     padding-top: 10px;
@@ -342,8 +360,15 @@ nav a:hover, nav .active {
 .projects {
     display: flex;
     flex-direction: row;
+    margin-bottom: 40px;
 }
+.projects {
+    margin-right: 20px;
+
+}
+
 
 .projects a{
     margin-right: 20px;
+
 }
