@@ -29,86 +29,19 @@
                     <th>finished</th>
                     <th> hardware_desc</th>
                 </tr>
-                <tr>
-                    <td>Thing 1</td>
-                    <td>Thing 2</td>
-                    <td>Thing 2</td>
-                    <td>Thing 2</td>
-                    <td>Thing 2</td>
-                    <td>Thing 3</td>
-                </tr>
-                <tr>
-                    <td>Thing 1</td>
-                    <td>Thing 2</td>
-                    <td>Thing 2</td>
-                    <td>Thing 2</td>
-                    <td>Thing 2</td>
-                    <td>Thing 3</td>
-                </tr>
-                <tr>
-                    <td>Thing 1</td>
-                    <td>Thing 2</td>
-                    <td>Thing 3</td>
-                    <td>Thing 3</td>
-                    <td>Thing 3</td>
-                    <td>Thing 3</td>
-                </tr>
-                <tr>
-                    <td>Thing 1</td>
-                    <td>Thing 2</td>
-                    <td>Thing 2</td>
-                    <td>Thing 2</td>
-                    <td>Thing 2</td>
-                    <td>Thing 3</td>
-                </tr>
-                <tr>
-                    <td>Thing 1</td>
-                    <td>Thing 2</td>
-                    <td>Thing 2</td>
-                    <td>Thing 2</td>
-                    <td>Thing 2</td>
-                    <td>Thing 3</td>
-                </tr>
-                <tr>
-                    <td>Thing 1</td>
-                    <td>Thing 1</td>
-                    <td>Thing 1</td>
-                    <td>Thing 1</td>
-                    <td>Thing 2</td>
-                    <td>Thing 3</td>
-                </tr>
-                <tr>
-                    <td>Thing 1</td>
-                    <td>Thing 2</td>
-                    <td>Thing 3</td>
-                    <td>Thing 3</td>
-                    <td>Thing 3</td>
-                    <td>Thing 3</td>
-                </tr>
-                <tr>
-                    <td>Thing 1</td>
-                    <td>Thing 2</td>
-                    <td>Thing 2</td>
-                    <td>Thing 2</td>
-                    <td>Thing 2</td>
-                    <td>Thing 3</td>
-                </tr>
-                <tr>
-                    <td>Thing 1</td>
-                    <td>Thing 2</td>
-                    <td>Thing 2</td>
-                    <td>Thing 2</td>
-                    <td>Thing 2</td>
-                    <td>Thing 3</td>
-                </tr>
-                <tr>
-                    <td>Thing 1</td>
-                    <td>Thing 2</td>
-                    <td>Thing 3</td>
-                    <td>Thing 3</td>
-                    <td>Thing 3</td>
-                    <td>Thing 3</td>
-                </tr>
+                @foreach($projects as $project)
+                    <tr>
+                        <td>{{ $project->project_id }}</td>
+                        <td>{{ $project->company_id }}</td>
+                        <td>{{ $project->application_desc }}</td>
+                        <td>{{ $project->maintenance }}</td>
+                        <td>{{ $project->operating_system }}</td>
+                        <td>{{ $project->finished }}</td>
+                        <td>{{ $project->hardware_desc }}</td>
+
+                    </tr>
+                @endforeach
+
             </table>
         </div>
     </div>
@@ -130,78 +63,19 @@
                     <th> hardware_desc</th>
                     <th>paused</th>
                 </tr>
-                <tr>
-                    <td>Thing 1</td>
-                    <td>Thing 2</td>
-                    <td>Thing 3</td>
-                    <td>Thing 3</td>
-                    <td>Thing 3</td>
-                    <td>Thing 3</td>
-                </tr>
-                <tr>
-                    <td>Thing 1</td>
-                    <td>Thing 2</td>
-                    <td>Thing 3</td>
-                    <td>Thing 3</td>
-                    <td>Thing 3</td>
-                    <td>Thing 3</td>
-                </tr>
-                <tr>
-                    <td>Thing 1</td>
-                    <td>Thing 2</td>
-                    <td>Thing 2</td>
-                    <td>Thing 2</td>
-                    <td>Thing 2</td>
-                    <td>Thing 3</td>
-                </tr>
-                <tr>
-                    <td>Thing 1</td>
-                    <td>Thing 2</td>
-                    <td>Thing 2</td>
-                    <td>Thing 2</td>
-                    <td>Thing 2</td>
-                    <td>Thing 3</td>
-                </tr>
-                <tr>
-                    <td>Thing 1</td>
-                    <td>Thing 2</td>
-                    <td>Thing 2</td>
-                    <td>Thing 2</td>
-                    <td>Thing 2</td>
-                    <td>Thing 3</td>
-                </tr>
-                <tr>
-                    <td>Thing 1</td>
-                    <td>Thing 2</td>
-                    <td>Thing 2</td>
-                    <td>Thing 2</td>
-                    <td>Thing 2</td>
-                    <td>Thing 3</td>
-                </tr>
-                <tr>
-                    <td>Thing 1</td>
-                    <td>Thing 1</td>
-                    <td>Thing 1</td>
-                    <td>Thing 1</td>
-                    <td>Thing 2</td>
-                    <td>Thing 3</td>
-                </tr>
-                <tr>
-                    <td>Thing 1</td>
-                    <td>Thing 2</td>
-                    <td>Thing 3</td>
-                    <td>Thing 3</td>
-                    <td>Thing 3</td>
-                    <td>Thing 3</td>
-                </tr>
-                <tr>
-                    <td>Thing 1</td>
-                    <td>Thing 2</td>
-                    <td>Thing 2</td>
-                    <td>Thing 2</td>
-                    <td>Thing 2</td>
-                    <td>Thing 3</td>
-                </tr>
+                @foreach($projects as $project)
+                    <tr>
+                        <td>{{ $project->project_id }}</td>
+                        <td>{{ $project->company_id }}</td>
+                        <td>{{ $project->application_desc }}</td>
+                        <td>{{ $project->maintenance }}</td>
+                        <td>{{ $project->operating_system }}</td>
+                        <td>{{ $project->finished }}</td>
+                        <td>{{ $project->hardware_desc }}</td>
+
+                    </tr>
+                @endforeach
+
             </table>
         </div>
     </div>

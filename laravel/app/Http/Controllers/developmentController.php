@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Project;
 use Illuminate\Http\Request;
 
 class developmentController extends Controller
@@ -13,7 +14,9 @@ class developmentController extends Controller
      */
     public function index()
     {
-        return view('development/development');
+        $projects = \App\Project::all();
+        return view('development/development')->with('projects', $projects);
+
     }
 
     /**
@@ -34,13 +37,8 @@ class developmentController extends Controller
 
 
 
-
-        return view('development/development_start');
-    }
-
-    public function finish()
-    {
-      //
+        $projects = \App\Project::all();
+        return view('development/development_start')->with('projects', $projects);
     }
 
     /**
@@ -51,7 +49,15 @@ class developmentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $projects = new Project();
+        $projects->project_id = $request->project_id;
+        $projects->company_id = $request->company_id;
+        $projects->application_desc = $request->application_desc;
+        $projects->maintenance = $request->maintenance;
+        $projects->operating_system = $request->operating_system;
+        $projects->finished = $request->finished;
+        $projects->hardware_desc  = $request->hardware_desc;
+
     }
 
     /**
@@ -62,7 +68,8 @@ class developmentController extends Controller
      */
     public function show($id)
     {
-        return view('development/development_finish');
+        $projects = \App\Project::all();
+        return view('development/development_finish')->with('projects', $projects);
     }
 
     /**
