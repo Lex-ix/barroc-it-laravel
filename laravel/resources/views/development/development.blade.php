@@ -1,5 +1,5 @@
-@include('/partials/header')
-@include('/partials/nav')
+@extends('master')
+@section('content')
 
 <div class="projectstatus">
     <div class="container">
@@ -207,4 +207,4 @@
     </div>
 </div>
 
-@include('/partials/footer')
+@endsection

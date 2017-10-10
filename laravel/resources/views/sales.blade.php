@@ -1,5 +1,5 @@
-@include('/partials/header')
-@include('/partials/nav')
+@extends('master')
+@section('content')
 
 <div class="container">
     <h2 class="subhead">Sales</h2>
@@ -99,4 +99,4 @@
     </table>
 </div>
 
-@include('/partials/footer')
+@endsection

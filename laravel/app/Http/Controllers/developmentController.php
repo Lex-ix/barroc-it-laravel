@@ -23,6 +23,18 @@ class developmentController extends Controller
      */
     public function create()
     {
+//        $faker = Factory::create();
+//
+//        for( $x = 0 ; $x < 30;$x++)
+//        {
+//            $project = new Project();
+//            $
+//            $project->save();
+//        }
+
+
+
+
         return view('development/development_start');
     }
 
