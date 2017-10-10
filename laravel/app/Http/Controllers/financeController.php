@@ -30,7 +30,7 @@ class financeController extends Controller
     {
 //        $faker = Factory::create();
 //
-//        for( $x = 0 ; $x < 100;$x++)
+//        for( $x = 0 ; $x <= 30;$x++)
 //        {
 //            $admin = new Company();
 //            $admin->company_name = $faker->company;
@@ -53,7 +53,7 @@ class financeController extends Controller
 //            $admin->fax_number = $faker->randomNumber($nbDigits = Null, $strict = false);
 //            $admin->phone_number = $faker->phoneNumber;
 //            $admin->phone_number1 = $faker->phoneNumber;
-//            $admin->name = $faker->name;
+//            $admin->name = $faker->firstName($gender = 'male'|'female');
 //            $admin->last_name = $faker->lastName;
 //            $admin->initials = $faker->randomLetter;
 //            $admin->bcr_control = $faker->randomNumber($nbDigits = Null, $strict = false);
