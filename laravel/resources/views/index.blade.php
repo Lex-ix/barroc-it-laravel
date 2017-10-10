@@ -1,5 +1,5 @@
-@include('/partials/header')
-@include('/partials/nav')
+@extends('master')
+@section('content')
 
 <div class="main-content">
     <section>
@@ -82,4 +82,4 @@
     </section>
 </div>
 
-@include('/partials/footer')
+@endsection
