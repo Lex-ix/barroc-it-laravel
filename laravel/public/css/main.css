@@ -256,6 +256,7 @@ select {
 
 .login{
     display: flex;
+    height: 100vh;
 }
 
 .login .title {
