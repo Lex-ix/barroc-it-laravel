@@ -23,7 +23,8 @@
                 <tr>
                     <th>project_id</th>
                     <th>company_id</th>
-                    <th>application_Desc</th>
+                    <th>Project_name</th>
+                    {{--<th>application_Desc</th>--}}
                     <th>maintenance</th>
                     <th>operating_system</th>
                     <th>finished</th>
@@ -33,7 +34,8 @@
                     <tr>
                         <td>{{ $project->project_id }}</td>
                         <td>{{ $project->company_id }}</td>
-                        <td>{{ $project->application_desc }}</td>
+                        <td>{{$project->project_name}}</td>
+                        {{--<td>{{ $project->application_desc }}</td>--}}
                         <td>{{ $project->maintenance }}</td>
                         <td>{{ $project->operating_system }}</td>
                         <td>{{ $project->finished }}</td>
@@ -53,7 +55,8 @@
                 <tr>
                     <th>project_id</th>
                     <th>company_id</th>
-                    <th>application_Desc</th>
+                    <th>project_name</th>
+                    {{--<th>application_Desc</th>--}}
                     <th>maintenance</th>
                     <th>operating_system</th>
                     <th>finished</th>
@@ -63,7 +66,8 @@
                     <tr>
                         <td>{{ $project->project_id }}</td>
                         <td>{{ $project->company_id }}</td>
-                        <td>{{ $project->application_desc }}</td>
+                        <td>{{$project->project_name}}</td>
+                        {{--<td>{{ $project->application_desc }}</td>--}}
                         <td>{{ $project->maintenance }}</td>
                         <td>{{ $project->operating_system }}</td>
                         <td>{{ $project->finished }}</td>

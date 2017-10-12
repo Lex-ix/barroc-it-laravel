@@ -9,22 +9,23 @@
                 <tr>
                     <th>project_id</th>
                     <th>company_id</th>
-                    <th>application_Desc</th>
+                    {{--<th>application_Desc</th>--}}
+                    <th>project_name</th>
                     {{--<th>maintenance</th>--}}
                     {{--<th>operating_system</th>--}}
-                    <th>finished</th>
                     {{--<th>hardware_desc</th>--}}
                 </tr>
                 @foreach($projects as $project)
                     <tr>
                         <td>{{ $project->project_id}}</td>
                         <td>{{ $project->company_id}}</td>
-                        <td>{{ $project->application_desc}}</td>
+                        {{--<td>{{ $project->application_desc}}</td>--}}
+                        <td>{{$project->project_name}}</td>
                         {{--<td>{{ $project->maintenance}}</td>--}}
                         {{--<td>{{ $project->operating_system}}</td>--}}
-                        <td>{{ $project->finished}}</td>
                         {{--<td>{{ $project->hardware_desc}}</td>--}}
-                        <td><input type="submit" value="View Project" class="button"></td>
+                        <td><a href="development/create/{id}" target="_blank" class="button">View Project</a></td>
+
                     </tr>
                 @endforeach
             </table>

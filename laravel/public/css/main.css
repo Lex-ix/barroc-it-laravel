@@ -171,7 +171,9 @@ section {
 table {
     font-family: 'Helvetica-Normal';
     border-collapse: collapse;
-}
+    padding: 9px;
+
+    }
 
 .scroll {
     overflow-y: auto;
@@ -197,7 +199,7 @@ tr:nth-child(even) {
 }
 
 th:nth-child(even):hover {
-    background: #fff;
+    background: #888888;
 }
 
 tr:nth-child(odd) {
@@ -205,11 +207,14 @@ tr:nth-child(odd) {
 }
 
 tr:nth-child(odd):hover {
-    background: #f2f2f2;
+    background: #888883;
 }
 
 td {
+    margin-bottom: 20px;
     padding-right: 15px;
+    padding: 15px;
+
 }
 
 .background .gerrie:hover {
@@ -395,5 +400,6 @@ nav a:hover, nav .active {
     margin-right: 20px;
 
 }
+
 
 
