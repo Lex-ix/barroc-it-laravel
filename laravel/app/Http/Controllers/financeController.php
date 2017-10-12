@@ -20,7 +20,7 @@ class financeController extends Controller
      */
     public function index()
     {
-        $companies = \App\Company::all();
+        $companies = Company::all();
         return view('/finance')->with('companies', $companies);
     }
 
@@ -31,10 +31,10 @@ class financeController extends Controller
      */
     public function create()
     {
-//        $faker = Factory::create();
+        $faker = Factory::create();
 
-//        for( $x = 0 ; $x <= 2;$x++)
-//        {
+        for( $x = 0 ; $x <= 30;$x++)
+        {
             //====================USERS FAKER===================\\
 //            $admin = new User();
 //            $admin->username = $faker->userName;
@@ -43,6 +43,7 @@ class financeController extends Controller
             //====================PROJECT FAKER=================\\
 //            $admin = new Project();
 //            $admin->company_id = $faker->numberBetween($min = 1, $max = 28);
+//            $admin->project_name = $faker->word;
 //            $admin->application_desc = $faker->text($maxNbChars = 200);
 //            $admin->maintenance = $faker->numberBetween($min = 0, $max = 1);
 //            $admin->operating_system = $faker->word;
@@ -59,35 +60,35 @@ class financeController extends Controller
 //            $admin->appointment_desc = $faker->text($maxNbChars = 200);
             
             //=====================COMPANY FAKER================\\
-//            $admin = new Company();
-//            $admin->company_name = $faker->company;
-//            $admin->residence = $faker->city;
-//            $admin->residence = $faker->city;
-//            $admin->zipcode = $faker->postcode;
-//            $admin->zipcode1 = $faker->postcode;
-//            $admin->adress = $faker->streetName;
-//            $admin->adress1 = $faker->streetName;
-//            $admin->house_number = $faker->buildingNumber;
-//            $admin->house_number1 = $faker->buildingNumber;
-//            $admin->unpaid_invoices = $faker->numberBetween($min = 0, $max = 10);
-//            $admin->bank_account_number = $faker->bankAccountNumber;
-//            $admin->vat_number = $faker->numerify('ad ####');
-//            $admin->ledger_number = $faker->randomNumber($nbDigits = Null, $strict = false);
-//            $admin->maximum = $faker->numberBetween($min = 0, $max = 1000);
-//            $admin->balance = $faker->numberBetween($min = 0, $max = 1000);
-//            $admin->credit_worthy = $faker->numberBetween($min = 0, $max = 1);
-//            $admin->email = $faker->email;
-//            $admin->fax_number = $faker->randomNumber($nbDigits = Null, $strict = false);
-//            $admin->phone_number = $faker->phoneNumber;
-//            $admin->phone_number1 = $faker->phoneNumber;
-//            $admin->name = $faker->firstName($gender = 'male'|'female');
-//            $admin->last_name = $faker->lastName;
-//            $admin->initials = $faker->randomLetter;
-//            $admin->bcr_control = $faker->randomNumber($nbDigits = Null, $strict = false);
+            $admin = new Company();
+            $admin->company_name = $faker->company;
+            $admin->residence = $faker->city;
+            $admin->residence = $faker->city;
+            $admin->zipcode = $faker->postcode;
+            $admin->zipcode1 = $faker->postcode;
+            $admin->adress = $faker->streetName;
+            $admin->adress1 = $faker->streetName;
+            $admin->house_number = $faker->buildingNumber;
+            $admin->house_number1 = $faker->buildingNumber;
+            $admin->unpaid_invoices = $faker->numberBetween($min = 0, $max = 10);
+            $admin->bank_account_number = $faker->bankAccountNumber;
+            $admin->vat_number = $faker->numerify('ad ####');
+            $admin->ledger_number = $faker->randomNumber($nbDigits = Null, $strict = false);
+            $admin->maximum = $faker->numberBetween($min = 0, $max = 1000);
+            $admin->balance = $faker->numberBetween($min = 0, $max = 1000);
+            $admin->credit_worthy = $faker->numberBetween($min = 0, $max = 1);
+            $admin->email = $faker->email;
+            $admin->fax_number = $faker->randomNumber($nbDigits = Null, $strict = false);
+            $admin->phone_number = $faker->phoneNumber;
+            $admin->phone_number1 = $faker->phoneNumber;
+            $admin->name = $faker->firstName($gender = 'male'|'female');
+            $admin->last_name = $faker->lastName;
+            $admin->initials = $faker->randomLetter;
+            $admin->bcr_control = $faker->numberBetween(0, 1);
             
             //=====================SAVE========================\\
-//            $admin->save();
-//        }
+            $admin->save();
+        }
         return view('invoice');
     }
 
@@ -100,7 +101,7 @@ class financeController extends Controller
     public function store(Request $request)
     {
         $companies = new Company();
-        $companies->company_id = $request->company_id;
+        $companies->id = $request->id;
         $companies->company_name = $request->company_name;
         $companies->residence = $request->residence;
         $companies->residence1 = $request->residence1;
@@ -135,7 +136,8 @@ class financeController extends Controller
      */
     public function show($id)
     {
-        //
+        $companies = Company::find($id);
+        return view('finance_details')->with('companies', $companies);
     }
 
     /**
