@@ -13,6 +13,16 @@
     <div class="center">
         <h2 class="tac subhead">Login</h2>
 
+        @if ($errors->any())
+            <ul>
+                @foreach($errors->all() as $error)
+                    <li class="help-block subhead">
+                        {{ $error }}
+                    </li>
+                @endforeach
+            </ul>
+        @endif
+
         <form method="POST" action="{{ route('login') }}">
             {{ csrf_field() }}
 
@@ -21,22 +31,10 @@
                 <input id="username" type="text" name="username" required autofocus>
             </div>
 
-            @if ($errors->has('email'))
-                <span class="help-block">
-                    <strong>{{ $errors->first('email') }}</strong>
-                </span>
-            @endif
-
             <div>
                 <label for="password" class="subhead">Password:</label>
                 <input id="password" type="password" name="password" required>
             </div>
-
-            @if ($errors->has('password'))
-                <span class="help-block">
-                    <strong>{{ $errors->first('password') }}</strong>
-                </span>
-            @endif
 
             <div>
                 <label class="subhead">
