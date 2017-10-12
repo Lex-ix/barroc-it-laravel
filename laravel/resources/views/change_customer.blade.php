@@ -6,6 +6,7 @@
         <h2 class="subhead">Edit customer</h2>
 
         <form action="">
+            {{csrf_field()}}
             <h4 class="subhead">Personal information:</h4>
             <div class="form-group">
                 <label for="name">First name:*</label>

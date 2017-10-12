@@ -17,7 +17,7 @@ class salesController extends Controller
     {
         $companies = \App\Company::All();
 
-        return view('sales')->with('companies', $companies);
+        return view('sales/sales')->with('companies', $companies);
     }
 
     /**
@@ -49,7 +49,9 @@ class salesController extends Controller
      */
     public function show($id)
     {
-        //
+        $company = \App\Company::find($id);
+
+        return view('sales/show')->with('company', $company);
     }
 
     /**

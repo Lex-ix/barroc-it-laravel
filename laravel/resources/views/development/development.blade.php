@@ -38,16 +38,13 @@
                         <td>{{ $project->operating_system }}</td>
                         <td>{{ $project->finished }}</td>
                         <td>{{ $project->hardware_desc }}</td>
-
                     </tr>
                 @endforeach
-
             </table>
         </div>
     </div>
 </div>
 </div>
-
 <div class="pausedstatus">
     <div class="container">
         <h2 class="subhead">paused projects</h2>
@@ -61,7 +58,6 @@
                     <th>operating_system</th>
                     <th>finished</th>
                     <th> hardware_desc</th>
-                    <th>paused</th>
                 </tr>
                 @foreach($projects as $project)
                     <tr>
@@ -72,10 +68,8 @@
                         <td>{{ $project->operating_system }}</td>
                         <td>{{ $project->finished }}</td>
                         <td>{{ $project->hardware_desc }}</td>
-
                     </tr>
                 @endforeach
-
             </table>
         </div>
     </div>
