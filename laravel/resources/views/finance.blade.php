@@ -5,73 +5,27 @@
     <div class="container">
             <h2 class="subhead">company's lagging behind.</h2>
             <table class="finance">
-                <tr>
-                    <td>company_name</td>
-                    <td><form action="">
-                            <input type="submit" value="-">
-                        </form>
-                    </td>
-
-                    <td>Hoeveelheid in het rood</td>
-                    
-                    <td>
-                        <form action="">
-                            <input type="submit" value="+">
-                        </form>
-                    </td>
-
-                    <td>
-                        <form action="/finance/create" class="form-group">
-                            <input type="submit" value="Invoeren factuur" href="/invoice.php">
-                        </form>
-                    </td>
-                </tr>
-                
-                <tr>
-                    <td>company_name</td>
-                    <td>
-                        <form action="">
-                            <input type="submit" value="-">
-                        </form>
-                    </td>
-                    
-                    <td>Hoeveelheid in het rood</td>
-                    
-                    <td>
-                        <form action="">
-                            <input type="submit" value="+">
-                        </form>
-                    </td>
-
-                    <td>
-                        <form action="/finance/create" class="form-group">
-                            <input type="submit" value="Invoeren factuur" href="/invoice.php">
-                        </form>
-                    </td>
-                </tr>
-                
-                <tr>
-                    <td>company_name</td>
-                    <td>
-                        <form action="">
-                            <input type="submit" value="-">
-                        </form>
-                    </td>
-
-                    <td>Hoeveelheid in het rood</td>
-                    
-                    <td>
-                        <form action="">
-                            <input type="submit" value="+">
-                        </form>
-                    </td>
-
-                    <td>
-                        <form action="/finance/create" class="form-group">
-                            <input type="submit" value="Invoeren factuur" href="/invoice.php">
-                        </form>
-                    </td>
-                </tr>
+                @foreach($companies as $company)
+                    <tr>
+                        <td>{{ $company->company_name }}</td>
+                        <td>
+                            <form action="">
+                                <input type="submit" value="-">
+                            </form>
+                        </td>
+                        <td>{{ $company->balance }}</td>
+                        <td>
+                            <form action="">
+                                <input type="submit" value="+">
+                            </form>
+                        </td>
+                        <td>
+                            <form action="{{ action('financeController@create') }}">
+                                <input type="submit" value="Insert invoice">
+                            </form>
+                        </td>
+                    </tr>
+                @endforeach
             </table>
     </div>
     <div class="background">
