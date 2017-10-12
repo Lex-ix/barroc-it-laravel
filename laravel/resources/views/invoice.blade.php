@@ -5,6 +5,7 @@
     <h2 class="subhead">Invoice Information</h2>
     <div class="invoice_info">
         <form action="" class="form-group">
+            {{csrf_field()}}
             <label for="invoice_nr">Invoice Nr</label>
             <input type="text" name="invoice_nr" id="invoice_nr" value="project ID" disabled>
             <label for="company_id">Customer ID</label>
@@ -97,7 +98,6 @@
     <h2 class="subhead">Project information</h2>
     
     <div class="project_data">
-        
         <div class="left_row">
         <table>
             <tr>
@@ -106,7 +106,6 @@
             </tr>
         </table>
         </div>
-        
         <div class="right_row">
             <table>
                 <tr>

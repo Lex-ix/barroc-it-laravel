@@ -9,6 +9,7 @@
 
     <section>
         <form action="">
+            {{csrf_field()}}
             <label for="customer">Customer ID:</label>
             <select name="customer" id="customer">
                 @foreach($companies as $company)
