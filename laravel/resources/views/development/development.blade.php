@@ -27,7 +27,7 @@
                     <th>maintenance</th>
                     <th>operating_system</th>
                     <th>finished</th>
-                    <th> hardware_desc</th>
+                    {{--<th> hardware_desc</th>--}}
                 </tr>
                 @foreach($projects as $project)
                     <tr>
@@ -37,7 +37,7 @@
                         <td>{{ $project->maintenance }}</td>
                         <td>{{ $project->operating_system }}</td>
                         <td>{{ $project->finished }}</td>
-                        <td>{{ $project->hardware_desc }}</td>
+                        {{--<td>{{ $project->hardware_desc }}</td>--}}
                     </tr>
                 @endforeach
             </table>
@@ -57,7 +57,7 @@
                     <th>maintenance</th>
                     <th>operating_system</th>
                     <th>finished</th>
-                    <th> hardware_desc</th>
+                    {{--<th> hardware_desc</th>--}}
                 </tr>
                 @foreach($projects as $project)
                     <tr>
@@ -67,7 +67,7 @@
                         <td>{{ $project->maintenance }}</td>
                         <td>{{ $project->operating_system }}</td>
                         <td>{{ $project->finished }}</td>
-                        <td>{{ $project->hardware_desc }}</td>
+                        {{--<td>{{ $project->hardware_desc }}</td>--}}
                     </tr>
                 @endforeach
             </table>
