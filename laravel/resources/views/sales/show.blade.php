@@ -5,6 +5,7 @@
         <h2 class="subhead">{{ $company->company_name }}</h2>
 
         <section>
+            <div class="barroc_data">
             <div class="left_row">
             <table>
                 <tr>
@@ -50,10 +51,7 @@
                         <td>{{ $company->house_number1 }}</td>
                     </tr>
                 @endif
-            </table>
-            </div>
-            <div class="right_row">
-                <table>
+
                 <tr>
                     <th>Adress</th>
                     <td>{{ $company->adress }}</td>
@@ -74,7 +72,10 @@
                     <th>Bank account number</th>
                     <td>{{ $company->bank_account_number }}</td>
                 </tr>
-
+            </table>
+            </div>
+                <div class="right_row">
+                    <table>
                 <tr>
                     <th>VAT number</th>
                     <td>{{ $company->vat_number }}</td>
@@ -145,6 +146,7 @@
                     </td>
                 </tr>
             </table>
+            </div>
             </div>
         </section>
     </div>
