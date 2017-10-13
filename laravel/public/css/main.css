@@ -210,8 +210,8 @@ tr:nth-child(even) {
     background: #f2f2f2;
 }
 
-th:nth-child(even):hover {
-    background: #888888;
+tr:nth-child(even):hover {
+    background: #D5D5D5;
 }
 
 tr:nth-child(odd) {
@@ -219,7 +219,7 @@ tr:nth-child(odd) {
 }
 
 tr:nth-child(odd):hover {
-    background: #888883;
+    background: #D5D5D5;
 }
 
 td {
