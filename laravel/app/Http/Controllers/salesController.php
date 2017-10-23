@@ -53,6 +53,7 @@ class salesController extends Controller
      */
     public function store(Request $request)
     {
+
     }
 
     /**
@@ -97,5 +98,9 @@ class salesController extends Controller
      */
     public function destroy($id)
     {
+        $company = Company::findOrFail($id);
+        $company->delete();
+
+        return redirect(action('salesController@index'));
     }
 }
