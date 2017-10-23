@@ -24,7 +24,7 @@
                         {{--<td>{{ $project->maintenance}}</td>--}}
                         {{--<td>{{ $project->operating_system}}</td>--}}
                         {{--<td>{{ $project->hardware_desc}}</td>--}}
-                        <td><a href="development/create/{id}" target="_blank" class="button">View Project</a></td>
+                        <td><a href="{{ action ('developmentController@show', $project->project_id) }}" target="_blank" class="button">View Project</a></td>
 
                     </tr>
                 @endforeach
@@ -53,7 +53,7 @@
                         {{--<td>{{ $project->maintenance}}</td>--}}
                         {{--<td>{{ $project->operating_system}}</td>--}}
                         {{--<td>{{ $project->hardware_desc}}</td>--}}
-                        <td><a href="development/create/{id}" target="_blank" class="button">View Project</a></td>
+                        <td><a href="{{ action ('developmentController@show', $project->project_id) }}" target="_blank" class="button">View Project</a></td>
 
                     </tr>
                 @endforeach
