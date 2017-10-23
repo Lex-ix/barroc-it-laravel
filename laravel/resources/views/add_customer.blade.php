@@ -5,8 +5,9 @@
     <div class="container customer">
         <h2 class="subhead">Add customer</h2>
 
-        <form action="">
+        <form action="{{ action('companiesController@create') }}" method="GET">
             {{csrf_field()}}
+
             <h4 class="subhead">Personal information:</h4>
             <div class="form-group">
                 <label for="name">First name:*</label>
@@ -43,19 +44,6 @@
                 <input type="email" id="email" placeholder="Enter your e-mail here." required>
             </div>
 
-            <h4 class="subhead">Project information</h4>
-            <div class="form-group">
-                <label for="project">Project name:*</label>
-                <input type="text" id="project" placeholder="Enter your project name here." required>
-            </div>
-            <div class="form-group">
-                <label for="amount">Max amount of debt:*</label>
-                <input type="text" id="amount" placeholder="Enter the max amount of debt here." required>
-            </div>
-            <div class="form-group">
-                <label for="comment">Comment:</label>
-                <textarea name="comment" id="comment" placeholder="Enter your comment here" cols="30" rows="10"></textarea>
-            </div>
             <div class="form-group">
                 <input class="submit" type="submit" value="Add">
             </div>
