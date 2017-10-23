@@ -3,7 +3,7 @@
 
 <div class="customerstatus">
     <div class="container">
-        <h2 class="subhead">Active projects</h2>
+        <h2 class="subhead">Projects</h2>
         <div class="scroll">
             <table>
                 <tr>
@@ -27,6 +27,7 @@
                         <td>{{ $project->finished }}</td>
                         {{--<td>{{ $project->hardware_desc }}</td>--}}
                         <td><input type="submit" value="Finish Project" class="button"></td>
+                        <td><a href="{{ action('developmentController@show', $project->project_id) }}" target="_blank" class="button">View Project</a></td>
                     </tr>
                 @endforeach
             </table>

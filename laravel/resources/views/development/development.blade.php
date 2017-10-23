@@ -5,12 +5,7 @@
     <div class="container">
         <h2 class="subhead"> Development Home Scherm</h2>
         <div class="projects">
-            <div class="start">
-                <a href="development/create" target="_blank" class="button">Start project</a>
-            </div>
-            <div class="finish">
-                <a href="development/show" target="_blank" class="button">Finish project</a>
-            </div>
+            <a href="development/create" target="_blank" class="button">Projects</a>
         </div>
     </div>
 </div>
