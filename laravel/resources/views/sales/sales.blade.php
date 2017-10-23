@@ -6,20 +6,6 @@
         <section>
             <a href="user/create" class="button">Add customer</a>
         </section>
-
-        <section>
-            <form action="">
-                {{csrf_field()}}
-                <label for="customer">Customer ID:</label>
-                <select name="customer" id="customer">
-                    @foreach($companies as $company)
-                        <option value="{{ $company->company_id }}">{{ $company->company_id }}</option>
-                    @endforeach
-                </select>
-                <input type="submit" value="Edit customer">
-                <input type="submit" value="Delete customer">
-            </form>
-        </section>
     </div>
 
     <section class="background">
@@ -48,9 +34,9 @@
                 </tr>
                 @foreach ($companies as $company)
                     @if ($company->balance <= $company->maximum)
-                        <tr class="gerrie">
-                            <td><a href="{{ action('salesController@show', $company->company_id) }}">Details</a></td>
-                            <td>{{ $company->company_id }}</td>
+                        <tr>
+                            <td><a class="button" href="{{ action('salesController@show', $company->id) }}">Details</a></td>
+                            <td>{{ $company->id }}</td>
                             <td>{{ $company->last_name }}, {{ $company->name }}</td>
                             <td>{{ $company->company_name }}</td>
                             <td>{{ $company->phone_number }}</td>
@@ -59,7 +45,7 @@
                             <td>{{ $company->email }}</td>
                             <td>{{ $company->maximum }}</td>
                             <td>{{ $company->balance }}</td>
-                            <td><a href="{{ action('salesController@destroy', $company->company_id) }}">Delete</a></td>
+                            <td><a class="button" href="{{ action('salesController@destroy', $company->id) }}">Delete</a></td>
                         </tr>
                     @endif
                 @endforeach
@@ -76,6 +62,7 @@
     <div class="tbl-center scroll">
         <table>
             <tr>
+                <th></th>
                 <th>ID</th>
                 <th>Name</th>
                 <th>Company</th>
@@ -85,11 +72,13 @@
                 <th>E-mail</th>
                 <th>maximum</th>
                 <th>balance</th>
+                <th></th>
             </tr>
             @foreach ($companies as $company)
                 @if ($company->balance > $company->maximum)
-                    <tr class="gerrie">
-                        <td>{{ $company->company_id }}</td>
+                    <tr>
+                        <td><a class="button" href="{{ action('salesController@show', $company->id) }}">Details</a></td>
+                        <td>{{ $company->id }}</td>
                         <td>{{ $company->last_name }}, {{ $company->name }}</td>
                         <td>{{ $company->company_name }}</td>
                         <td>{{ $company->phone_number }}</td>
@@ -98,6 +87,7 @@
                         <td>{{ $company->email }}</td>
                         <td>{{ $company->maximum }}</td>
                         <td>{{ $company->balance }}</td>
+                        <td><a class="button" href="{{ action('salesController@destroy', $company->id) }}">Delete</a></td>
                     </tr>
                 @endif
             @endforeach
