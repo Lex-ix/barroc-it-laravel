@@ -85,11 +85,11 @@
             <table>
                 <tr>
                     <th>Residence</th>
-                    <td>{{ $companies-> }}</td>
+                    <td>{{ $companies->residence }}</td>
                 </tr>
                 <tr>
                     <th>zip code</th>
-                    <td>$zipcode</td>
+                    <td>{{ $companies->zipcode }}</td>
                 </tr>
             </table>
         </div>
@@ -110,7 +110,7 @@
             <table>
                 <tr>
                     <th>project description</th>
-                    <td>$project_description</td>
+                    <td>{{ $projects->project_name }}</td>
                 </tr>
             </table>
         </div>

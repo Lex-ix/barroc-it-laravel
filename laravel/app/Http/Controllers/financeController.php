@@ -21,7 +21,9 @@ class financeController extends Controller
     public function index()
     {
         $companies = Company::all();
-        return view('/finance')->with('companies', $companies);
+        $projects = Project::all();
+        
+        return view('/finance')->with('companies', $companies)->with('projects', $projects);
     }
 
     /**
