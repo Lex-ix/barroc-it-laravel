@@ -11,7 +11,7 @@
 |
 */
 
-route::get('/' , function(){
+route::get('/', function () {
     return view('auth/login');
 });
 

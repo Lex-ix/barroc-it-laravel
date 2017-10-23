@@ -13,8 +13,23 @@ class salesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
+//        switch (\Auth::user()->username) {
+//            case 'Sales':
+//                return redirect(action('salesController@index'));
+//                break;
+//            case 'Development';
+//                return redirect(action('developmentController@index'));
+//                break;
+//            case 'Finance':
+//                return redirect(action('financeController@index'));
+//                break;
+//            default:
+//                return redirect(view('home'));
+//        }
+
         $companies = \App\Company::All();
 
         return view('sales/sales')->with('companies', $companies);
@@ -38,7 +53,6 @@ class salesController extends Controller
      */
     public function store(Request $request)
     {
-        //
     }
 
     /**
@@ -62,7 +76,6 @@ class salesController extends Controller
      */
     public function edit($id)
     {
-        //
     }
 
     /**
@@ -74,7 +87,6 @@ class salesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
     }
 
     /**
@@ -85,6 +97,5 @@ class salesController extends Controller
      */
     public function destroy($id)
     {
-        //
     }
 }

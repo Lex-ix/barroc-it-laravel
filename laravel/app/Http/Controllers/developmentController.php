@@ -68,8 +68,9 @@ class developmentController extends Controller
      */
     public function show($id)
     {
-        $projects = \App\Project::all();
-        return view('development/development_finish')->with('projects', $projects);
+        $projects = Project::find($id);
+        return view('development/development_detail')->with('projects', $projects);
+
     }
 
     /**

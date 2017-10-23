@@ -4,7 +4,7 @@
     <div class="container">
         <h2 class="subhead">Sales</h2>
         <section>
-            <a href="user/create" class="button">Add customer</a>
+            <a href="{{ action('companiesController@create') }}" class="button">Add customer</a>
         </section>
     </div>
 
