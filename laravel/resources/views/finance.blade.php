@@ -10,9 +10,11 @@
                     <tr>
                         <td>{{ $company->company_name }}</td>
                         <td>
-                            <form action="">
+                            <form action="{{ action('financeController@store') }}" method="post">
                                 {{ csrf_field() }}
-                                <input type="submit" value="-">
+                                {{ method_field('PUT') }}
+                                <label for="min" hidden></label>
+                                <input type="submit" name="min" id="min" value="-">
                             </form>
                         </td>
                         <td>{{ $company->balance }}</td>
@@ -23,10 +25,7 @@
                             </form>
                         </td>
                         <td>
-                            <form action="{{ action('financeController@create') }}">
-                                {{ csrf_field() }}
-                                <input type="submit" value="Insert invoice">
-                            </form>
+                            <a class="button" href="{{ action('invoicesController@show', $company->id) }}">Insert invoice</a>
                         </td>
                     </tr>
                 @endforeach
@@ -77,6 +76,4 @@
             </form>
             </div>
         </div>
-
-
 @endsection

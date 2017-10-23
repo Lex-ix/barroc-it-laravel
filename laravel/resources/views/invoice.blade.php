@@ -9,11 +9,11 @@
             <label for="invoice_nr">Invoice Nr</label>
             <input type="text" name="invoice_nr" id="invoice_nr" value="project ID" disabled>
             <label for="company_id">Customer ID</label>
-            <input type="text" name="company_id" id="company_id" value="Klant ID" disabled>
+            <input type="text" name="company_id" id="company_id" value="{{ $companies->id }}" disabled>
             <label for="company_name">Company name</label>
-            <input type="text" name="company_name" id="company_name" value="Company name" disabled>
+            <input type="text" name="company_name" id="company_name" value="{{ $companies->company_name }}" disabled>
             <label for="invoice_price">Invoice price</label>
-            <input type="text" name="invoice_price" id="invoice_price" value="invoice price" disabled>
+            <input type="text" name="invoice_price" id="invoice_price" value="hi" disabled>
         </form>
     </div>
     
@@ -68,15 +68,15 @@
             <table>
                 <tr>
                     <th>Company name</th>
-                    <td>$company_name</td>
+                    <td>{{ $companies->company_name }}</td>
                 </tr>
                 <tr>
                     <th>Address</th>
-                    <td>$address</td>
+                    <td>{{ $companies->adress }}</td>
                 </tr>
                 <tr>
                     <th>House number</th>
-                    <td>$house_number</td>
+                    <td>{{ $companies->house_number }}</td>
                 </tr>
             </table>
         </div>
@@ -85,7 +85,7 @@
             <table>
                 <tr>
                     <th>Residence</th>
-                    <td>$residence</td>
+                    <td>{{ $companies-> }}</td>
                 </tr>
                 <tr>
                     <th>zip code</th>

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Company;
+use App\Invoice;
 use Illuminate\Http\Request;
 
 class invoicesController extends Controller
@@ -50,7 +52,9 @@ class invoicesController extends Controller
      */
     public function show($id)
     {
-        //
+        $companies = Company::find($id);
+        $invoices = Invoice::all();
+        return view('invoice')->with('companies', $companies)->with('invoices', $invoices);
     }
 
     /**
