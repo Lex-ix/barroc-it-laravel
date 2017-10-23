@@ -13,8 +13,23 @@ class salesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
+        switch (\Auth::user()->username) {
+            case 'Sales':
+                return redirect(action('salesController@index'));
+                break;
+            case 'Development';
+                return redirect(action('developmentController@index'));
+                break;
+            case 'Finance':
+                return redirect(action('financeController@index'));
+                break;
+            default:
+                return redirect(view('home'));
+        }
+
         $companies = \App\Company::All();
 
         return view('sales/sales')->with('companies', $companies);
@@ -27,6 +42,19 @@ class salesController extends Controller
      */
     public function create()
     {
+        switch (\Auth::user()->username) {
+            case 'Sales':
+                return redirect(action('salesController@index'));
+                break;
+            case 'Development';
+                return redirect(action('developmentController@index'));
+                break;
+            case 'Finance':
+                return redirect(action('financeController@index'));
+                break;
+            default:
+                return redirect(view('home'));
+        }
 
     }
 
@@ -38,7 +66,20 @@ class salesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        switch (\Auth::user()->username) {
+            case 'Sales':
+                return redirect(action('salesController@index'));
+                break;
+            case 'Development';
+                return redirect(action('developmentController@index'));
+                break;
+            case 'Finance':
+                return redirect(action('financeController@index'));
+                break;
+            default:
+                return redirect(view('home'));
+        }
+
     }
 
     /**
@@ -49,6 +90,19 @@ class salesController extends Controller
      */
     public function show($id)
     {
+        switch (\Auth::user()->username) {
+            case 'Sales':
+                return redirect(action('salesController@index'));
+                break;
+            case 'Development';
+                return redirect(action('developmentController@index'));
+                break;
+            case 'Finance':
+                return redirect(action('financeController@index'));
+                break;
+            default:
+                return redirect(view('home'));
+        }
         $company = \App\Company::find($id);
 
         return view('sales/show')->with('company', $company);
@@ -62,7 +116,19 @@ class salesController extends Controller
      */
     public function edit($id)
     {
-        //
+        switch (\Auth::user()->username) {
+            case 'Sales':
+                return redirect(action('salesController@index'));
+                break;
+            case 'Development';
+                return redirect(action('developmentController@index'));
+                break;
+            case 'Finance':
+                return redirect(action('financeController@index'));
+                break;
+            default:
+                return redirect(view('home'));
+        }
     }
 
     /**
@@ -74,7 +140,19 @@ class salesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        switch (\Auth::user()->username) {
+            case 'Sales':
+                return redirect(action('salesController@index'));
+                break;
+            case 'Development';
+                return redirect(action('developmentController@index'));
+                break;
+            case 'Finance':
+                return redirect(action('financeController@index'));
+                break;
+            default:
+                return redirect(view('home'));
+        }
     }
 
     /**
@@ -85,6 +163,18 @@ class salesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        switch (\Auth::user()->username) {
+            case 'Sales':
+                return redirect(action('salesController@index'));
+                break;
+            case 'Development';
+                return redirect(action('developmentController@index'));
+                break;
+            case 'Finance':
+                return redirect(action('financeController@index'));
+                break;
+            default:
+                return redirect(view('home'));
+        }
     }
 }
