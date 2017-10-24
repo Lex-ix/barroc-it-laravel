@@ -396,5 +396,7 @@ nav a:hover, nav .active {
 
 }
 
-
+#negative{
+    color: #f00;
+}
 
