@@ -405,5 +405,7 @@ nav a:hover, nav .active {
     background-color: #FF4D4D;
 }
 
-
+#negative{
+    color: #f00;
+}
 
