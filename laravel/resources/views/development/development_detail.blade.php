@@ -7,7 +7,7 @@
                 <table>
                     <tr>
                         <th>Project id</th>
-                        <td>{{ $projects->project_id }}</td>
+                        <td>{{ $projects->id }}</td>
                     </tr>
                     <tr>
                         <th>Project Name</th>
@@ -31,6 +31,10 @@
                     </tr>
 
                     <tr>
+                        <th>Started</th>
+                        <td>{{ $projects->started }}</td>
+                    </tr>
+                    <tr>
                         <th>Finished</th>
                         <td>{{ $projects->finished }}</td>
                     </tr>
@@ -52,8 +56,27 @@
 
                 </table>
                 <div class="control-panel">
-                    <input type="submit" value="Start Project" id="startProject">
-                    <input type="submit" value="Finish project"id="finishProject">
+                    {{--@if($projects->started == 0)--}}
+                        {{--<form action="{{action('developmentController@update', $projects->id )}}">--}}
+                            {{--<input type="submit" value="Start Project" id="startProject">--}}
+                            {{--{{method_field('PUT')}}--}}
+                            {{--{{csrf_field()}}--}}
+                        {{--</form>--}}
+                    {{--@endif--}}
+
+                    {{--@if($projects->finished == 0 && $projects->started == 1 )--}}
+                        {{--<form action="{{action('developmentController@update', $projects->id )}}" method="PUT">--}}
+                            {{--{{csrf_field()}}--}}
+
+                            {{--<input type="submit" value="Finish project" id="finishProject">--}}
+
+                        {{--</form>--}}
+                    {{--@endif--}}
+                    <form action="{{ action('developmentController@update', $projects->id) }}" method="PUT">
+                        {{ csrf_field() }}
+
+                        <input type="submit" value="FINISH">
+                    </form>
                 </div>
             </div>
 

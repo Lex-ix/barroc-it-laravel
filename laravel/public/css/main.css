@@ -397,8 +397,6 @@ nav a:hover, nav .active {
 }
 .control-panel{
     margin-top:30px;
-    display: flex;
-    justify-content: space-between;
 }
 #startProject{
     background-color: #90FF11;
