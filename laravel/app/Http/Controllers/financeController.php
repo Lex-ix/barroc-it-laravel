@@ -119,6 +119,7 @@ class financeController extends Controller
     public function show($id)
     {
         $companies = Company::find($id);
+
         foreach ($companies->project as $project) {
             if($project->paused == 0 && $companies->balance >= $companies->maximum){
                 $update = Project::find($project->id);

@@ -47,17 +47,34 @@ class developmentController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, $id = null)
     {
-        $projects = new Project();
-        $projects->project_id = $request->project_id;
-        $projects->company_id = $request->company_id;
-        $projects->application_desc = $request->application_desc;
-        $projects->maintenance = $request->maintenance;
-        $projects->operating_system = $request->operating_system;
-        $projects->finished = $request->finished;
-        $projects->hardware_desc  = $request->hardware_desc;
+        if ($request->value == 'start') {
+            $project = Project::find($id);
 
+            $project->started = 1;
+
+            $project->save();
+
+            return redirect(action('developmentController@show', $id));
+        } else if ($request->value == 'finish') {
+            $project = Project::find($id);
+
+            $project->finished = 1;
+
+            $project->save();
+
+            return redirect(action('developmentController@create'));
+        } else {
+            $projects = new Project();
+            $projects->project_id = $request->project_id;
+            $projects->company_id = $request->company_id;
+            $projects->application_desc = $request->application_desc;
+            $projects->maintenance = $request->maintenance;
+            $projects->operating_system = $request->operating_system;
+            $projects->finished = $request->finished;
+            $projects->hardware_desc = $request->hardware_desc;
+        }
     }
 
     /**
@@ -79,9 +96,9 @@ class developmentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id, $value)
     {
-        //
+
     }
 
     /**
@@ -93,7 +110,6 @@ class developmentController extends Controller
      */
     public function update(Request $request, $id)
     {
-       
 
     }
 

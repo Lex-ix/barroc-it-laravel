@@ -55,31 +55,25 @@
                     </tr>
 
                 </table>
+
                 <div class="control-panel">
-                    {{--@if($projects->started == 0)--}}
-                        {{--<form action="{{action('developmentController@update', $projects->id )}}">--}}
-                            {{--<input type="submit" value="Start Project" id="startProject">--}}
-                            {{--{{method_field('PUT')}}--}}
-                            {{--{{csrf_field()}}--}}
-                        {{--</form>--}}
-                    {{--@endif--}}
+                    @if ($projects->started == 0)
+                        <form action="{{action('developmentController@store', $projects->id)}}" method="GET">
+                            {{ csrf_field() }}
 
-                    {{--@if($projects->finished == 0 && $projects->started == 1 )--}}
-                        {{--<form action="{{action('developmentController@update', $projects->id )}}" method="PUT">--}}
-                            {{--{{csrf_field()}}--}}
+                            <input type="hidden" value="start" name="value">
+                            <input type="submit" value="Start Project" id="startProject">
+                        </form>
+                    @elseif ($projects->finished == 0 && $projects->started == 1 )
+                        <form action="{{ action('developmentController@store', $projects->id) }}" method="GET">
+                            {{ csrf_field() }}
 
-                            {{--<input type="submit" value="Finish project" id="finishProject">--}}
-
-                        {{--</form>--}}
-                    {{--@endif--}}
-                    <form action="{{ action('developmentController@update', $projects->id) }}" method="PUT">
-                        {{ csrf_field() }}
-
-                        <input type="submit" value="FINISH">
-                    </form>
+                            <input type="hidden" value="finish" name="value">
+                            <input type="submit" value="Finish Project" id="finishProject">
+                        </form>
+                    @endif
                 </div>
             </div>
-
         </div>
     </div>
     @endsection
