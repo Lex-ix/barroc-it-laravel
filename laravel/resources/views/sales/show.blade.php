@@ -3,6 +3,7 @@
 
     <div class="container">
         <h2 class="subhead">{{ $company->company_name }}</h2>
+        <a class="button" href="{{ action('projectsController@create', $company->id) }}">Create project</a>
 
         <section>
             <div class="barroc_data">

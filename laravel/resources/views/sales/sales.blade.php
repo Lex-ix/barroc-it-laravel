@@ -4,7 +4,7 @@
     <div class="container">
         <h2 class="subhead">Sales</h2>
         <section>
-            <a href="user/create" class="button">Add customer</a>
+            <a href="{{ action('companiesController@create') }}" class="button">Add customer</a>
         </section>
     </div>
 
@@ -45,7 +45,13 @@
                             <td>{{ $company->email }}</td>
                             <td>{{ $company->maximum }}</td>
                             <td>{{ $company->balance }}</td>
-                            <td><a class="button" href="{{ action('salesController@destroy', $company->id) }}">Delete</a></td>
+                            <td>
+                                <form action="{{ action('salesController@destroy', $company->id) }}" method="POST">
+                                    {{ csrf_field() }}
+                                    <input name="_method" type="hidden" value="DELETE">
+                                    <input type="submit" class="button" value="Delete">
+                                </form>
+                            </td>
                         </tr>
                     @endif
                 @endforeach

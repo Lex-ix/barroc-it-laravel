@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Company;
 use App\Invoice;
+use App\Project;
 use Illuminate\Http\Request;
 
 class invoicesController extends Controller
@@ -15,8 +16,10 @@ class invoicesController extends Controller
      */
     public function index()
     {
-        $invoices = \App\Invoice::all();
-        return view('/finance/invoice')->with('invoices', $invoices);
+        $projects = Project::all();
+        $invoices = Invoice::all();
+        
+        return view('/finance/invoice')->with('projects', $projects)->with('invoices', $invoices);
     }
 
     /**
@@ -54,7 +57,9 @@ class invoicesController extends Controller
     {
         $companies = Company::find($id);
         $invoices = Invoice::all();
-        return view('invoice')->with('companies', $companies)->with('invoices', $invoices);
+        $projects = Project::find($id);
+        
+        return view('invoice')->with('companies', $companies)->with('invoices', $invoices)->with('projects', $projects);
     }
 
     /**
