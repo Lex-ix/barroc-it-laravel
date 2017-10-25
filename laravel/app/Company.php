@@ -14,4 +14,8 @@ class Company extends Model
     public function project() {
         return $this->hasMany('\App\Project');
     }
+    
+//    public function invoice() {
+//        return $this->hasMany('\App\Invoice');
+//    }
 }

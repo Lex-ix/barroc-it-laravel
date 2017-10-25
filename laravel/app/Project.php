@@ -10,4 +10,8 @@ class Project extends Model
     use SoftDeletes;
 
     protected $table = 'tbl_project';
+    
+    public function invoice() {
+        return $this->hasMany('\App\Invoice');
+    }
 }

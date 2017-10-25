@@ -395,6 +395,19 @@ nav a:hover, nav .active {
     margin-right: 20px;
 
 }
+.control-panel{
+    margin-top:30px;
+    display: flex;
+    justify-content: space-between;
+}
+#startProject{
+    background-color: #90FF11;
+}
+#finishProject{
+    background-color: #FF4D4D;
+}
 
-
+#negative{
+    color: #f00;
+}
 

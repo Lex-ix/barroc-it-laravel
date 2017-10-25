@@ -102,32 +102,12 @@ class financeController extends Controller
      */
     public function store(Request $request)
     {
-        $companies = new Company();
-        $companies->id = $request->id;
-        $companies->company_name = $request->company_name;
-        $companies->residence = $request->residence;
-        $companies->residence1 = $request->residence1;
-        $companies->zipcode = $request->zipcode;
-        $companies->zipcode1 = $request->zipcode1;
-        $companies->adress = $request->adress;
-        $companies->adress1 = $request->adress1;
-        $companies->house_number = $request->house_number;
-        $companies->house_number1 = $request->house_number1;
-        $companies->unpaid_invoices = $request->unpaid_invoices;
-        $companies->bank_account_number = $request->bank_account_number;
-        $companies->vat_number = $request->vat_number;
-        $companies->ledger_number = $request->ledger_number;
-        $companies->maximum = $request->maximum;
-        $companies->balance = $request->balance;
-        $companies->credit_worthy = $request->credit_worthy;
-        $companies->email = $request->email;
-        $companies->fax_number = $request->fax_number;
-        $companies->phone_number = $request->phone_number;
-        $companies->phone_number1 = $request->phone_number1;
-        $companies->name = $request->name;
-        $companies->last_name = $request->last_name;
-        $companies->initials = $request->initials;
-        $companies->bcr_control = $request->bcr_control;
+//        $projects = new Project();
+//        $projects->paused = 1;
+//        $projects->save();
+        
+//        $companies = new Company();
+        
     }
 
     /**
@@ -139,6 +119,20 @@ class financeController extends Controller
     public function show($id)
     {
         $companies = Company::find($id);
+        foreach ($companies->project as $project) {
+            if($project->paused == 0 && $companies->balance >= $companies->maximum){
+                $update = Project::find($project->id);
+                $update->paused = 1;
+                $update->save();
+            }
+            else {
+                $update = Project::find($project->id);
+                $update->paused = 0;
+                $update->save();
+            }
+        }
+    
+    
         return view('finance_details')->with('companies', $companies);
     }
 

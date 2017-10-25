@@ -2,37 +2,6 @@
 @section('content')
     
 <div class="main-content">
-    <div class="container">
-            <h2 class="subhead">company's lagging behind.</h2>
-        <div class="scroll">
-            <table class="finance">
-                @foreach($companies as $company)
-                    <tr>
-                        <td>{{ $company->company_name }}</td>
-                        <td>
-                            <form action="{{ action('financeController@store') }}" method="post">
-                                {{ csrf_field() }}
-                                {{ method_field('PUT') }}
-                                <label for="min" hidden></label>
-                                <input type="submit" name="min" id="min" value="-">
-                            </form>
-                        </td>
-                        <td>{{ $company->balance }}</td>
-                        <td>
-                            <form action="">
-                                {{ csrf_field() }}
-                                <input type="submit" value="+">
-                            </form>
-                        </td>
-                        <td>
-                            <a class="button" href="{{ action('invoicesController@show', $company->id) }}">Insert invoice</a>
-                        </td>
-                    </tr>
-                @endforeach
-            </table>
-            <a href="{{ action('financeController@create') }}">heu</a>
-        </div>
-    </div>
     <div class="background">
         <div class="container">
             <div class="request-info">
@@ -59,21 +28,4 @@
         </div>
     </div>
 </div>
-
-        <div class="container">
-            <div class="pause-project">
-                <h2 class="subhead">Pause Project</h2>
-            <form action="">
-                <label for="customer">Customer ID</label>
-                <select name="customer" id="customer">
-                    <option value="">Select</option>
-                    <option value="">------------</option>
-                    @foreach($companies as $company)
-                        <option value="">{{ $company->id }}</option>
-                    @endforeach
-                </select>
-                <input type="submit" value="Pause project">
-            </form>
-            </div>
-        </div>
 @endsection

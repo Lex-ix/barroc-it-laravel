@@ -3,7 +3,7 @@
     <div class="container">
         <h1>{{ $projects->project_id }}</h1>
         <div class="project_data">
-            <div class="left_row">
+            <div class="row">
                 <table>
                     <tr>
                         <th>Project id</th>
@@ -51,7 +51,12 @@
                     </tr>
 
                 </table>
+                <div class="control-panel">
+                    <input type="submit" value="Start Project" id="startProject">
+                    <input type="submit" value="Finish project"id="finishProject">
+                </div>
             </div>
+
         </div>
     </div>
     @endsection
