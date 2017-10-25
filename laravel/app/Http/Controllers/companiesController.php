@@ -34,8 +34,6 @@ class companiesController extends Controller
      */
     public function store(Request $request)
     {
-//        dd($request);
-
         $this->validate($request, [
             'name'                  => 'required|string',
             'preposition'           => 'string|nullable',
@@ -50,7 +48,7 @@ class companiesController extends Controller
             'bank_account_number'   => 'required|string',
             'vat_number'            => 'required',
             'ledger_number'         => 'required|integer',
-            'maximum'               => 'required',
+            'maximum'               => 'required|integer|min:0',
             'bcr_control'         => '',
             'initials'              => 'required',
         ]);
@@ -120,6 +118,6 @@ class companiesController extends Controller
      */
     public function destroy($id)
     {
-        //
+
     }
 }

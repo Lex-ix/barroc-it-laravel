@@ -57,7 +57,6 @@ class invoicesController extends Controller
     {
         $companies = Company::find($id);
         $invoices = Invoice::all();
-        $projects = Project::find($id);
         
         return view('invoice')->with('companies', $companies)->with('invoices', $invoices)->with('projects', $projects);
     }
