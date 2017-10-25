@@ -33,7 +33,8 @@ class developmentController extends Controller
             ->WHERE ([
                 ['started' , '=' , 1],
                 ['finished' , '!=', 1],
-                ['paused', '=', 0]
+                ['paused', '=', 0],
+                ['deleted_at', '=', null]
             ])
             ->get();
 
@@ -42,7 +43,8 @@ class developmentController extends Controller
             ->WHERE ([
                 ['started' , '=' , 1],
                 ['finished' , '!=', 1],
-                ['paused', '=', 1]
+                ['paused', '=', 1],
+                ['deleted_at', '=', null]
             ])
             ->get();
 
@@ -90,7 +92,8 @@ class developmentController extends Controller
             ->WHERE ([
                 ['started' , '=' , 0],
                 ['finished' , '!=', 1],
-                ['paused', '=', 0]
+                ['paused', '=', 0],
+                ['deleted_at', '=', null]
             ])
             ->get();
 
@@ -99,7 +102,8 @@ class developmentController extends Controller
             ->WHERE ([
                 ['started' , '=' , 1],
                 ['finished' , '!=', 1],
-                ['paused', '=', 0]
+                ['paused', '=', 0],
+                ['deleted_at', '=', null]
             ])
             ->get();
 
@@ -151,18 +155,18 @@ class developmentController extends Controller
      */
     public function show($id)
     {
-//        switch (\Auth::user()->username) {
-//            case 'Sales':
-//                return redirect(action('salesController@index'));
-//                break;
-//            case 'Development';
-//                break;
-//            case 'Finance':
-//                return redirect(action('financeController@index'));
-//                break;
-//            default:
-//                return redirect(view('home'));
-//        }
+        switch (\Auth::user()->username) {
+            case 'Sales':
+                return redirect(action('salesController@index'));
+                break;
+            case 'Development';
+                break;
+            case 'Finance':
+                return redirect(action('financeController@index'));
+                break;
+            default:
+                return redirect(view('home'));
+        }
 
         $projects = \App\Project::find($id);
 
