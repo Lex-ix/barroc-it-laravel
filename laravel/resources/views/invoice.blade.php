@@ -6,14 +6,15 @@
         <div class="invoice_info">
             <form action="" class="form-group">
                 {{csrf_field()}}
+
                 <label for="company_id">Customer ID</label>
                 <input type="text" name="company_id" id="company_id" value="{{ $companies->id }}" disabled>
+
                 <label for="company_name">Company name</label>
-                <input type="text" name="company_name" id="company_name" value="{{ $companies->company_name }}"
-                       disabled>
+                <input type="text" name="company_name" id="company_name" value="{{ $companies->company_name }}" disabled>
+
                 <label for="invoice_price">Invoice price</label>
-                <input type="text" name="invoice_price" id="invoice_price"
-                       value="@foreach($projects->invoice as $invoice) {{ $invoice->amount }} @endforeach" disabled>
+                {{--<input type="text" name="invoice_price" id="invoice_price" value="@foreach($companies->invoice-> as $invoice) {{ $invoice->amount }} @endforeach" disabled>--}}
             </form>
         </div>
 

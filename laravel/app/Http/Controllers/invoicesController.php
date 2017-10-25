@@ -19,7 +19,7 @@ class invoicesController extends Controller
         $projects = Project::all();
         $invoices = Invoice::all();
         
-        return view('/finance/invoice')->with('projects', $projects)->with('invoices', $invoices);
+        return view('finance/invoice')->with('projects', $projects)->with('invoices', $invoices);
     }
 
     /**
@@ -27,9 +27,9 @@ class invoicesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function createInvoice($id)
     {
-        //
+        return view('create_invoice')->with('id', $id);
     }
 
     /**
@@ -41,10 +41,21 @@ class invoicesController extends Controller
     public function store(Request $request)
     {
         $invoice = new \App\Invoice();
-        $invoice->project_id = $request->project_id;
+        $company = \App\Company::find($request->id);
+
+        $invoice->project_id = $request->id;
         $invoice->date = $request->date;
         $invoice->quantity = $request->quantity;
         $invoice->amount = $request->amount;
+
+        $company->balance = $company->balance - $request->amount;
+        $company->unpaid_invoices = $company->unpaid_invoices + $request->quantity;
+
+        $invoice->save();
+        $company->save();
+
+//        return 'SOMETHING';
+        return redirect(action('financeController@index'));
     }
 
     /**
@@ -58,7 +69,7 @@ class invoicesController extends Controller
         $companies = Company::find($id);
         $invoices = Invoice::all();
         
-        return view('invoice')->with('companies', $companies)->with('invoices', $invoices)->with('projects', $projects);
+        return view('invoice')->with('companies', $companies)->with('invoices', $invoices);
     }
 
     /**
