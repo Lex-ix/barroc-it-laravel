@@ -151,20 +151,21 @@ class developmentController extends Controller
      */
     public function show($id)
     {
-        switch (\Auth::user()->username) {
-            case 'Sales':
-                return redirect(action('salesController@index'));
-                break;
-            case 'Development';
-                break;
-            case 'Finance':
-                return redirect(action('financeController@index'));
-                break;
-            default:
-                return redirect(view('home'));
-        }
+//        switch (\Auth::user()->username) {
+//            case 'Sales':
+//                return redirect(action('salesController@index'));
+//                break;
+//            case 'Development';
+//                break;
+//            case 'Finance':
+//                return redirect(action('financeController@index'));
+//                break;
+//            default:
+//                return redirect(view('home'));
+//        }
 
-        $projects = Project::find($id);
+        $projects = \App\Project::find($id);
+
         return view('development/development_detail')->with('projects', $projects);
 
     }

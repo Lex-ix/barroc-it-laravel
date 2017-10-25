@@ -15,7 +15,7 @@
                     <tr>
                         <td>{{ $project->id}}</td>
                         <td>{{ $project->company_id}}</td>
-                        <td>{{$project->project_name}}</td>
+                        <td>{{$project->name}}</td>
                         <td><a href="{{ action ('developmentController@show', $project->id) }}" target="_blank" class="button">View Project</a></td>
                     </tr>
                 @endforeach
@@ -33,7 +33,7 @@
                     <tr>
                         <td>{{ $project->id}}</td>
                         <td>{{ $project->company_id}}</td>
-                        <td>{{$project->project_name}}</td>
+                        <td>{{ $project->name }}</td>
                         <td><a href="{{ action ('developmentController@show', $project->id) }}" target="_blank" class="button">View Project</a></td>
                     </tr>
                 @endforeach

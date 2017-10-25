@@ -1,7 +1,7 @@
 @extends('master')
 @section('content')
     <div class="container">
-        <h1>{{ $projects->project_id }}</h1>
+        <h1>{{ $projects->name }}</h1>
         <div class="project_data">
             <div class="row">
                 <table>
@@ -11,7 +11,7 @@
                     </tr>
                     <tr>
                         <th>Project Name</th>
-                        <td>{{ $projects->project_name }}</td>
+                        <td>{{ $projects->name }}</td>
                     </tr>
                     <tr>
                         <th>Company id</th>
