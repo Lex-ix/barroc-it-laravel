@@ -80,8 +80,7 @@
                         @endif
 
                         <td>
-                            <a class="button" href="{{ action('invoicesController@show', $companies->id) }}">Insert
-                                invoice</a>
+                            <a class="button" href="{{ route('createInvoice', $companies->id) }}">Insert invoice</a>
                         </td>
                     </tr>
 

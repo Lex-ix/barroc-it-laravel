@@ -23,6 +23,8 @@ route::get('/help_nl' , function(){
     return view('help_NL');
 });
 
+route::get('/invoice/create/{id}', 'invoicesController@createInvoice')->name('createInvoice');
+
 Route::resource('appointments', 'appointmentsController');
 Route::resource('company', 'companiesController');
 Route::resource('invoice', 'invoicesController');

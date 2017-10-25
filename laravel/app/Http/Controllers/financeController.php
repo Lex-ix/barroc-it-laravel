@@ -23,7 +23,7 @@ class financeController extends Controller
         $companies = Company::all();
         $projects = Project::all();
         
-        return view('/finance')->with('companies', $companies)->with('projects', $projects);
+        return view('finance')->with('companies', $companies)->with('projects', $projects);
     }
 
     /**
