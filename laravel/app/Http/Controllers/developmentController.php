@@ -15,6 +15,18 @@ class developmentController extends Controller
      */
     public function index()
     {
+        switch (\Auth::user()->username) {
+            case 'Sales':
+                return redirect(action('salesController@index'));
+                break;
+            case 'Development';
+                break;
+            case 'Finance':
+                return redirect(action('financeController@index'));
+                break;
+            default:
+                return redirect(view('home'));
+        }
 
         $projectsS = DB::table('tbl_project')
             ->SELECT(DB::raw('*'))
@@ -52,6 +64,19 @@ class developmentController extends Controller
      */
     public function create()
     {
+        switch (\Auth::user()->username) {
+            case 'Sales':
+                return redirect(action('salesController@index'));
+                break;
+            case 'Development';
+                break;
+            case 'Finance':
+                return redirect(action('financeController@index'));
+                break;
+            default:
+                return redirect(view('home'));
+        }
+
 //        $faker = Factory::create();
 //
 //        for( $x = 0 ; $x < 30;$x++)
@@ -94,6 +119,19 @@ class developmentController extends Controller
      */
     public function store(Request $request, $id = null)
     {
+        switch (\Auth::user()->username) {
+            case 'Sales':
+                return redirect(action('salesController@index'));
+                break;
+            case 'Development';
+                break;
+            case 'Finance':
+                return redirect(action('financeController@index'));
+                break;
+            default:
+                return redirect(view('home'));
+        }
+
         $projects = new Project();
         $projects->project_id = $request->project_id;
         $projects->company_id = $request->company_id;
@@ -113,6 +151,19 @@ class developmentController extends Controller
      */
     public function show($id)
     {
+        switch (\Auth::user()->username) {
+            case 'Sales':
+                return redirect(action('salesController@index'));
+                break;
+            case 'Development';
+                break;
+            case 'Finance':
+                return redirect(action('financeController@index'));
+                break;
+            default:
+                return redirect(view('home'));
+        }
+
         $projects = Project::find($id);
         return view('development/development_detail')->with('projects', $projects);
 
@@ -138,26 +189,38 @@ class developmentController extends Controller
      */
     public function update(Request $request, $id)
     {
+        switch (\Auth::user()->username) {
+            case 'Sales':
+                return redirect(action('salesController@index'));
+                break;
+            case 'Development';
+                break;
+            case 'Finance':
+                return redirect(action('financeController@index'));
+                break;
+            default:
+                return redirect(view('home'));
+        }
 
-            if ($request->start == 'start') {
+        if ($request->start == 'start') {
 
-                $project = Project::find($id);
+            $project = Project::find($id);
 
-                $project->started = 1;
+            $project->started = 1;
 
-                $project->save();
+            $project->save();
 
-                return redirect(action('developmentController@show', $id));
-            } else if ($request->finish == 'finish') {
-                $project = Project::find($id);
+            return redirect(action('developmentController@show', $id));
+        } else if ($request->finish == 'finish') {
+            $project = Project::find($id);
 
-                $project->finished = 1;
+            $project->finished = 1;
 
-                $project->save();
+            $project->save();
 
-                return redirect(action('developmentController@create'));
-            }
-            return 'hi';
+            return redirect(action('developmentController@create'));
+        }
+        return 'hi';
 
     }
 

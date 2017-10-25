@@ -16,6 +16,19 @@ class invoicesController extends Controller
      */
     public function index()
     {
+        switch (\Auth::user()->username) {
+            case 'Sales':
+                return redirect(action('salesController@index'));
+                break;
+            case 'Development';
+                return redirect(action('developmentController@index'));
+                break;
+            case 'Finance':
+                break;
+            default:
+                return redirect(view('home'));
+        }
+
         $projects = Project::all();
         $invoices = Invoice::all();
         
@@ -29,6 +42,19 @@ class invoicesController extends Controller
      */
     public function createInvoice($id)
     {
+        switch (\Auth::user()->username) {
+            case 'Sales':
+                return redirect(action('salesController@index'));
+                break;
+            case 'Development';
+                return redirect(action('developmentController@index'));
+                break;
+            case 'Finance':
+                break;
+            default:
+                return redirect(view('home'));
+        }
+
         return view('create_invoice')->with('id', $id);
     }
 
@@ -40,6 +66,19 @@ class invoicesController extends Controller
      */
     public function store(Request $request)
     {
+        switch (\Auth::user()->username) {
+            case 'Sales':
+                return redirect(action('salesController@index'));
+                break;
+            case 'Development';
+                return redirect(action('developmentController@index'));
+                break;
+            case 'Finance':
+                break;
+            default:
+                return redirect(view('home'));
+        }
+
         $invoice = new \App\Invoice();
         $company = \App\Company::find($request->id);
 
@@ -66,6 +105,19 @@ class invoicesController extends Controller
      */
     public function show($id)
     {
+        switch (\Auth::user()->username) {
+            case 'Sales':
+                return redirect(action('salesController@index'));
+                break;
+            case 'Development';
+                return redirect(action('developmentController@index'));
+                break;
+            case 'Finance':
+                break;
+            default:
+                return redirect(view('home'));
+        }
+
         $companies = Company::find($id);
         $invoices = Invoice::all();
         

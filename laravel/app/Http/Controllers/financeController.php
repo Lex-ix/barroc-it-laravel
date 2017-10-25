@@ -20,6 +20,19 @@ class financeController extends Controller
      */
     public function index()
     {
+        switch (\Auth::user()->username) {
+            case 'Sales':
+                return redirect(action('salesController@index'));
+                break;
+            case 'Development';
+                return redirect(action('developmentController@index'));
+                break;
+            case 'Finance':
+                break;
+            default:
+                return redirect(view('home'));
+        }
+
         $companies = Company::all();
         $projects = Project::all();
         
@@ -33,6 +46,19 @@ class financeController extends Controller
      */
     public function create()
     {
+        switch (\Auth::user()->username) {
+            case 'Sales':
+                return redirect(action('salesController@index'));
+                break;
+            case 'Development';
+                return redirect(action('developmentController@index'));
+                break;
+            case 'Finance':
+                break;
+            default:
+                return redirect(view('home'));
+        }
+
 //        $faker = Factory::create();
 //
 //        for( $x = 0 ; $x <= 30;$x++)
@@ -118,6 +144,19 @@ class financeController extends Controller
      */
     public function show($id)
     {
+        switch (\Auth::user()->username) {
+            case 'Sales':
+                return redirect(action('salesController@index'));
+                break;
+            case 'Development';
+                return redirect(action('developmentController@index'));
+                break;
+            case 'Finance':
+                break;
+            default:
+                return redirect(view('home'));
+        }
+
         $companies = Company::find($id);
 
         foreach ($companies->project as $project) {
