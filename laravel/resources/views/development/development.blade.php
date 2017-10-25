@@ -26,7 +26,7 @@
                     <th>finished</th>
                     {{--<th> hardware_desc</th>--}}
                 </tr>
-                @foreach($projects as $project)
+                @foreach($projectsS as $project)
                     <tr>
                         <td>{{ $project->id }}</td>
                         <td>{{ $project->company_id }}</td>
@@ -60,7 +60,7 @@
                     <th>finished</th>
                     {{--<th> hardware_desc</th>--}}
                 </tr>
-                @foreach($projects as $project)
+                @foreach($projectsF as $project)
                     <tr>
                         <td>{{ $project->id }}</td>
                         <td>{{ $project->company_id }}</td>

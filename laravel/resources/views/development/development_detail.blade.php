@@ -58,17 +58,17 @@
 
                 <div class="control-panel">
                     @if ($projects->started == 0)
-                        <form action="{{action('developmentController@store', $projects->id)}}" method="GET">
+                        <form action="{{action('developmentController@update', $projects->id)}}" method="POST">
                             {{ csrf_field() }}
-
-                            <input type="hidden" value="start" name="value">
+                            {{method_field('PUT')}}
+                            <input type="hidden" value="start" name="start">
                             <input type="submit" value="Start Project" id="startProject">
                         </form>
                     @elseif ($projects->finished == 0 && $projects->started == 1 )
-                        <form action="{{ action('developmentController@store', $projects->id) }}" method="GET">
+                        <form action="{{ action('developmentController@update', $projects->id) }}" method="POST">
                             {{ csrf_field() }}
-
-                            <input type="hidden" value="finish" name="value">
+                            {{method_field('PUT')}}
+                            <input type="hidden" value="finish" name="finish">
                             <input type="submit" value="Finish Project" id="finishProject">
                         </form>
                     @endif

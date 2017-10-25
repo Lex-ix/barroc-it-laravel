@@ -15,8 +15,8 @@
                     {{--<th>operating_system</th>--}}
                     {{--<th>hardware_desc</th>--}}
                 </tr>
-                @foreach($projects as $project)
-                    @if ($project->started == 0)
+                @foreach($projectsQ as $project)
+
                     <tr>
                         <td>{{ $project->id}}</td>
                         <td>{{ $project->company_id}}</td>
@@ -28,7 +28,7 @@
                         <td><a href="{{ action ('developmentController@show', $project->id) }}" target="_blank" class="button">View Project</a></td>
 
                     </tr>
-                    @endif
+
                 @endforeach
 
             </table>
@@ -46,8 +46,8 @@
                     {{--<th>operating_system</th>--}}
                     {{--<th>hardware_desc</th>--}}
                 </tr>
-                @foreach($projects as $project)
-                    @if($project->started == 1)
+                @foreach($projectsA as $project)
+
                     <tr>
                         <td>{{ $project->id}}</td>
                         <td>{{ $project->company_id}}</td>
@@ -59,7 +59,7 @@
                         <td><a href="{{ action ('developmentController@show', $project->id) }}" target="_blank" class="button">View Project</a></td>
 
                     </tr>
-                    @endif
+
                 @endforeach
 
             </table>
