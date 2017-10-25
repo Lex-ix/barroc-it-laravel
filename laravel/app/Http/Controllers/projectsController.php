@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Company;
+use App\Project;
 use Illuminate\Http\Request;
+use Symfony\Component\Console\Helper\ProcessHelper;
 
 class projectsController extends Controller
 {
@@ -22,9 +24,11 @@ class projectsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create($id)
+    public function create()
     {
-        return view('projects/create');
+        $id = $_GET['id'];
+
+        return view('projects/create')->with('id', $id);
     }
 
     /**
@@ -35,7 +39,27 @@ class projectsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'company_id'        => 'required|integer',
+            'name'              => 'required|string',
+            'application_desc'  => 'required|string',
+            'maintenance'       => 'required|integer',
+            'operating_system'  => 'required|string',
+            'hardware_desc'     => 'required|string',
+        ]);
+
+        $project = new \App\Project();
+
+        $project->company_id        = $request->company_id;
+        $project->name              = $request->name;
+        $project->application_desc  = $request->application_desc;
+        $project->maintenance       = $request->maintenance;
+        $project->operating_system  = $request->operating_system;
+        $project->hardware_desc     = $request->hardware_desc;
+
+        $project->save();
+
+        return redirect(action('salesController@show', $request->company_id));
     }
 
     /**
@@ -46,7 +70,9 @@ class projectsController extends Controller
      */
     public function show($id)
     {
-        //
+        $project = \App\Project::find($id);
+
+        return view('projects/show')->with('project', $project);
     }
 
     /**
@@ -80,6 +106,9 @@ class projectsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $project = Project::findOrFail($id);
+        $project->delete();
+
+        return redirect(action('salesController@show', $project->company_id));
     }
 }

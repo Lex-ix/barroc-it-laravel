@@ -3,7 +3,10 @@
 
     <div class="container">
         <h2 class="subhead">{{ $company->company_name }}</h2>
-        <a class="button" href="{{ action('projectsController@create', $company->id) }}">Create project</a>
+        <form action="{{ action('projectsController@create') }}" method="GET">
+            <input type="hidden" value="{{ $company->id }}" name="id" id="id">
+            <input type="submit" class="button" value="Create project">
+        </form>
 
         <section>
             <div class="barroc_data">
@@ -52,20 +55,6 @@
                                 <td>{{ $company->house_number1 }}</td>
                             </tr>
                         @endif
-                    </table>
-                </div>
-                <div class="right_row">
-                    <table>
-                        <tr>
-                            <th>Adress</th>
-                            <td>{{ $company->adress }}</td>
-                        </tr>
-                        @if ($company->adress1)
-                            <tr>
-                                <th>Second adress</th>
-                                <td>{{ $company->adress1 }}</td>
-                            </tr>
-                        @endif
 
                         <tr>
                             <th>Unpaid invoices</th>
@@ -81,7 +70,10 @@
                             <th>VAT number</th>
                             <td>{{ $company->vat_number }}</td>
                         </tr>
-
+                    </table>
+                </div>
+                <div class="right_row">
+                    <table>
                         <tr>
                             <th>Ledger number</th>
                             <td>{{ $company->ledger_number }}</td>
@@ -149,8 +141,37 @@
                     </table>
                 </div>
             </div>
-            </div>
         </section>
-    </div>
 
+        @if (isset($company->project[0]->id))
+            <section>
+                <h2 class="subhead">Projects</h2>
+                <table class="barroc_data">
+                    <tr>
+                        <th></th>
+                        <th>Project name</th>
+                        <th></th>
+                    </tr>
+                @foreach ($company->project as $project)
+                    <tr>
+                        <td>
+                            <form action="{{ action('projectsController@show', $project->id) }}" method="GET">
+                                <input type="submit" class="submit" value="Details">
+                            </form>
+                        </td>
+                        <td>{{ $project->name }}</td>
+                        <td>
+                            <form action="{{ action('projectsController@destroy', $project->id) }}" method="POST">
+                                {{ csrf_field() }}
+
+                                <input name="_method" type="hidden" value="DELETE">
+                                <input type="submit" class="button" value="Delete">
+                            </form>
+                        </td>
+                    </tr>
+                @endforeach
+                </table>
+            </section>
+        @endif
+    </div>
 @endsection
