@@ -15,18 +15,20 @@
                     {{--<th>operating_system</th>--}}
                     {{--<th>hardware_desc</th>--}}
                 </tr>
-                @foreach($projects as $project)
+                @foreach($projectsQ as $project)
+
                     <tr>
-                        <td>{{ $project->project_id}}</td>
+                        <td>{{ $project->id}}</td>
                         <td>{{ $project->company_id}}</td>
                         {{--<td>{{ $project->application_desc}}</td>--}}
                         <td>{{$project->project_name}}</td>
                         {{--<td>{{ $project->maintenance}}</td>--}}
                         {{--<td>{{ $project->operating_system}}</td>--}}
                         {{--<td>{{ $project->hardware_desc}}</td>--}}
-                        <td><a href="{{ action ('developmentController@show', $project->project_id) }}" target="_blank" class="button">View Project</a></td>
+                        <td><a href="{{ action ('developmentController@show', $project->id) }}" target="_blank" class="button">View Project</a></td>
 
                     </tr>
+
                 @endforeach
 
             </table>
@@ -44,18 +46,20 @@
                     {{--<th>operating_system</th>--}}
                     {{--<th>hardware_desc</th>--}}
                 </tr>
-                @foreach($projects as $project)
+                @foreach($projectsA as $project)
+
                     <tr>
-                        <td>{{ $project->project_id}}</td>
+                        <td>{{ $project->id}}</td>
                         <td>{{ $project->company_id}}</td>
                         {{--<td>{{ $project->application_desc}}</td>--}}
                         <td>{{$project->project_name}}</td>
                         {{--<td>{{ $project->maintenance}}</td>--}}
                         {{--<td>{{ $project->operating_system}}</td>--}}
                         {{--<td>{{ $project->hardware_desc}}</td>--}}
-                        <td><a href="{{ action ('developmentController@show', $project->project_id) }}" target="_blank" class="button">View Project</a></td>
+                        <td><a href="{{ action ('developmentController@show', $project->id) }}" target="_blank" class="button">View Project</a></td>
 
                     </tr>
+
                 @endforeach
 
             </table>

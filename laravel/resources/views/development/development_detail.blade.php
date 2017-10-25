@@ -7,7 +7,7 @@
                 <table>
                     <tr>
                         <th>Project id</th>
-                        <td>{{ $projects->project_id }}</td>
+                        <td>{{ $projects->id }}</td>
                     </tr>
                     <tr>
                         <th>Project Name</th>
@@ -31,6 +31,10 @@
                     </tr>
 
                     <tr>
+                        <th>Started</th>
+                        <td>{{ $projects->started }}</td>
+                    </tr>
+                    <tr>
                         <th>Finished</th>
                         <td>{{ $projects->finished }}</td>
                     </tr>
@@ -51,12 +55,25 @@
                     </tr>
 
                 </table>
+
                 <div class="control-panel">
-                    <input type="submit" value="Start Project" id="startProject">
-                    <input type="submit" value="Finish project"id="finishProject">
+                    @if ($projects->started == 0)
+                        <form action="{{action('developmentController@update', $projects->id)}}" method="POST">
+                            {{ csrf_field() }}
+                            {{method_field('PUT')}}
+                            <input type="hidden" value="start" name="start">
+                            <input type="submit" value="Start Project" id="startProject">
+                        </form>
+                    @elseif ($projects->finished == 0 && $projects->started == 1 )
+                        <form action="{{ action('developmentController@update', $projects->id) }}" method="POST">
+                            {{ csrf_field() }}
+                            {{method_field('PUT')}}
+                            <input type="hidden" value="finish" name="finish">
+                            <input type="submit" value="Finish Project" id="finishProject">
+                        </form>
+                    @endif
                 </div>
             </div>
-
         </div>
     </div>
     @endsection

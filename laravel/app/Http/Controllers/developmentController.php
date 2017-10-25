@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Project;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class developmentController extends Controller
 {
@@ -14,8 +15,33 @@ class developmentController extends Controller
      */
     public function index()
     {
+
+        $projectsS = DB::table('tbl_project')
+            ->SELECT(DB::raw('*'))
+            ->WHERE ([
+                ['started' , '=' , 1],
+                ['finished' , '!=', 1],
+                ['paused', '=', 0]
+            ])
+            ->get();
+
+        $projectsF = DB::table('tbl_project')
+            ->SELECT(DB::raw('*'))
+            ->WHERE ([
+                ['started' , '=' , 1],
+                ['finished' , '!=', 1],
+                ['paused', '=', 1]
+            ])
+            ->get();
+
+
+
         $projects = \App\Project::all();
-        return view('development/development')->with('projects', $projects);
+        return view('development/development')
+            ->with('projects', $projects)
+            ->with('projectsS', $projectsS)
+            ->with('projectsF', $projectsF);
+
 
     }
 
@@ -34,11 +60,30 @@ class developmentController extends Controller
 //            $
 //            $project->save();
 //        }
+        $projectsQ = DB::table('tbl_project')
+            ->SELECT(DB::raw('*'))
+            ->WHERE ([
+                ['started' , '=' , 0],
+                ['finished' , '!=', 1],
+                ['paused', '=', 0]
+            ])
+            ->get();
 
+        $projectsA = DB::table('tbl_project')
+            ->SELECT(DB::raw('*'))
+            ->WHERE ([
+                ['started' , '=' , 1],
+                ['finished' , '!=', 1],
+                ['paused', '=', 0]
+            ])
+            ->get();
 
 
         $projects = \App\Project::all();
-        return view('development/development_start')->with('projects', $projects);
+        return view('development/development_start')
+            ->with('projects', $projects)
+            ->with('projectsQ', $projectsQ)
+            ->with('projectsA', $projectsA);
     }
 
     /**
@@ -47,7 +92,7 @@ class developmentController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, $id = null)
     {
         $projects = new Project();
         $projects->project_id = $request->project_id;
@@ -56,9 +101,9 @@ class developmentController extends Controller
         $projects->maintenance = $request->maintenance;
         $projects->operating_system = $request->operating_system;
         $projects->finished = $request->finished;
-        $projects->hardware_desc  = $request->hardware_desc;
-
+        $projects->hardware_desc = $request->hardware_desc;
     }
+
 
     /**
      * Display the specified resource.
@@ -79,9 +124,9 @@ class developmentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id, $value)
     {
-        //
+
     }
 
     /**
@@ -93,7 +138,27 @@ class developmentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+            if ($request->start == 'start') {
+
+                $project = Project::find($id);
+
+                $project->started = 1;
+
+                $project->save();
+
+                return redirect(action('developmentController@show', $id));
+            } else if ($request->finish == 'finish') {
+                $project = Project::find($id);
+
+                $project->finished = 1;
+
+                $project->save();
+
+                return redirect(action('developmentController@create'));
+            }
+            return 'hi';
+
     }
 
     /**
