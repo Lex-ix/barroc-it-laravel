@@ -19,24 +19,20 @@
                     <th>project_id</th>
                     <th>company_id</th>
                     <th>Project_name</th>
-                    {{--<th>application_Desc</th>--}}
                     <th>maintenance</th>
                     <th>operating_system</th>
                     <th>started</th>
                     <th>finished</th>
-                    {{--<th> hardware_desc</th>--}}
                 </tr>
                 @foreach($projectsS as $project)
                     <tr>
                         <td>{{ $project->id }}</td>
                         <td>{{ $project->company_id }}</td>
                         <td>{{$project->project_name}}</td>
-                        {{--<td>{{ $project->application_desc }}</td>--}}
                         <td>{{ $project->maintenance }}</td>
                         <td>{{ $project->operating_system }}</td>
                         <td>{{ $project->started }}</td>
                         <td>{{ $project->finished }}</td>
-                        {{--<td>{{ $project->hardware_desc }}</td>--}}
                     </tr>
                 @endforeach
             </table>
@@ -53,24 +49,20 @@
                     <th>project_id</th>
                     <th>company_id</th>
                     <th>project_name</th>
-                    {{--<th>application_Desc</th>--}}
                     <th>maintenance</th>
                     <th>operating_system</th>
                     <th>started</th>
                     <th>finished</th>
-                    {{--<th> hardware_desc</th>--}}
                 </tr>
                 @foreach($projectsF as $project)
                     <tr>
                         <td>{{ $project->id }}</td>
                         <td>{{ $project->company_id }}</td>
                         <td>{{$project->project_name}}</td>
-                        {{--<td>{{ $project->application_desc }}</td>--}}
                         <td>{{ $project->maintenance }}</td>
                         <td>{{ $project->operating_system }}</td>
                         <td>{{ $project->started }}</td>
                         <td>{{ $project->finished }}</td>
-                        {{--<td>{{ $project->hardware_desc }}</td>--}}
                     </tr>
                 @endforeach
             </table>

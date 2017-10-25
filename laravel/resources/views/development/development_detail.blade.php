@@ -29,7 +29,6 @@
                         <th>Operating system</th>
                         <td>{{ $projects->operating_system }}</td>
                     </tr>
-
                     <tr>
                         <th>Started</th>
                         <td>{{ $projects->started }}</td>
@@ -38,24 +37,19 @@
                         <th>Finished</th>
                         <td>{{ $projects->finished }}</td>
                     </tr>
-
                     <tr>
                         <th>Hardware description</th>
                         <td>{{ $projects->hardware_desc }}</td>
                     </tr>
-
                     <tr>
                         <th>Created at</th>
                         <td>{{ $projects->created_at }}</td>
                     </tr>
-
                     <tr>
                         <th>Updated at</th>
                         <td>{{ $projects->updated_at }}</td>
                     </tr>
-
                 </table>
-
                 <div class="control-panel">
                     @if ($projects->started == 0)
                         <form action="{{action('developmentController@update', $projects->id)}}" method="POST">
