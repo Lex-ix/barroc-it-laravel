@@ -15,17 +15,21 @@ class developmentController extends Controller
      */
     public function index()
     {
-        switch (\Auth::user()->username) {
-            case 'Sales':
-                return redirect(action('salesController@index'));
-                break;
-            case 'Development';
-                break;
-            case 'Finance':
-                return redirect(action('financeController@index'));
-                break;
-            default:
-                return redirect(view('home'));
+       if ( isset(\Auth::user()->username) ) {
+            switch (\Auth::user()->username) {
+                case 'Sales':
+                    return redirect(action('salesController@index'));
+                    break;
+                case 'Development';
+                    break;
+                case 'Finance':
+                    return redirect(action('financeController@index'));
+                    break;
+                default:
+                    return view('auth/login');
+            }
+        } else {
+            return view('auth/login');
         }
 
         $projectsS = DB::table('tbl_project')
@@ -66,18 +70,25 @@ class developmentController extends Controller
      */
     public function create()
     {
-        switch (\Auth::user()->username) {
-            case 'Sales':
-                return redirect(action('salesController@index'));
-                break;
-            case 'Development';
-                break;
-            case 'Finance':
-                return redirect(action('financeController@index'));
-                break;
-            default:
-                return redirect(view('home'));
+        if ( isset(\Auth::user()->username) ) {
+            switch (\Auth::user()->username) {
+                case 'Sales':
+                    return redirect(action('salesController@index'));
+                    break;
+                case 'Development';
+                    break;
+                case 'Finance':
+                    return redirect(action('financeController@index'));
+                    break;
+                default:
+                    return view('auth/login');
+            }
+        } else {
+            return view('auth/login');
         }
+
+
+
 
 //        $faker = Factory::create();
 //
@@ -123,17 +134,21 @@ class developmentController extends Controller
      */
     public function store(Request $request, $id = null)
     {
-        switch (\Auth::user()->username) {
-            case 'Sales':
-                return redirect(action('salesController@index'));
-                break;
-            case 'Development';
-                break;
-            case 'Finance':
-                return redirect(action('financeController@index'));
-                break;
-            default:
-                return redirect(view('home'));
+        if ( isset(\Auth::user()->username) ) {
+            switch (\Auth::user()->username) {
+                case 'Sales':
+                    return redirect(action('salesController@index'));
+                    break;
+                case 'Development';
+                    break;
+                case 'Finance':
+                    return redirect(action('financeController@index'));
+                    break;
+                default:
+                    return view('auth/login');
+            }
+        } else {
+            return view('auth/login');
         }
 
         $projects = new Project();
@@ -155,17 +170,21 @@ class developmentController extends Controller
      */
     public function show($id)
     {
-        switch (\Auth::user()->username) {
-            case 'Sales':
-                return redirect(action('salesController@index'));
-                break;
-            case 'Development';
-                break;
-            case 'Finance':
-                return redirect(action('financeController@index'));
-                break;
-            default:
-                return redirect(view('home'));
+        if ( isset(\Auth::user()->username) ) {
+            switch (\Auth::user()->username) {
+                case 'Sales':
+                    return redirect(action('salesController@index'));
+                    break;
+                case 'Development';
+                    break;
+                case 'Finance':
+                    return redirect(action('financeController@index'));
+                    break;
+                default:
+                    return view('auth/login');
+            }
+        } else {
+            return view('auth/login');
         }
 
         $projects = \App\Project::find($id);
@@ -194,17 +213,21 @@ class developmentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        switch (\Auth::user()->username) {
-            case 'Sales':
-                return redirect(action('salesController@index'));
-                break;
-            case 'Development';
-                break;
-            case 'Finance':
-                return redirect(action('financeController@index'));
-                break;
-            default:
-                return redirect(view('home'));
+        if ( isset(\Auth::user()->username) ) {
+            switch (\Auth::user()->username) {
+                case 'Sales':
+                    return redirect(action('salesController@index'));
+                    break;
+                case 'Development';
+                    break;
+                case 'Finance':
+                    return redirect(action('financeController@index'));
+                    break;
+                default:
+                    return view('auth/login');
+            }
+        } else {
+            return view('auth/login');
         }
 
         if ($request->start == 'start') {

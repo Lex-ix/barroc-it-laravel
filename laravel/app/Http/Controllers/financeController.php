@@ -20,17 +20,21 @@ class financeController extends Controller
      */
     public function index()
     {
-        switch (\Auth::user()->username) {
-            case 'Sales':
-                return redirect(action('salesController@index'));
-                break;
-            case 'Development';
-                return redirect(action('developmentController@index'));
-                break;
-            case 'Finance':
-                break;
-            default:
-                return redirect(view('home'));
+        if ( isset(\Auth::user()->username) ) {
+            switch (\Auth::user()->username) {
+                case 'Sales':
+                    return redirect(action('salesController@index'));
+                    break;
+                case 'Development';
+                    return redirect(action('developmentController@index'));
+                    break;
+                case 'Finance':
+                    break;
+                default:
+                    return view('auth/login');
+            }
+        } else {
+            return view('auth/login');
         }
 
         $companies = Company::all();
@@ -46,17 +50,21 @@ class financeController extends Controller
      */
     public function create()
     {
-        switch (\Auth::user()->username) {
-            case 'Sales':
-                return redirect(action('salesController@index'));
-                break;
-            case 'Development';
-                return redirect(action('developmentController@index'));
-                break;
-            case 'Finance':
-                break;
-            default:
-                return redirect(view('home'));
+        if ( isset(\Auth::user()->username) ) {
+            switch (\Auth::user()->username) {
+                case 'Sales':
+                    return redirect(action('salesController@index'));
+                    break;
+                case 'Development';
+                    return redirect(action('developmentController@index'));
+                    break;
+                case 'Finance':
+                    break;
+                default:
+                    return view('auth/login');
+            }
+        } else {
+            return view('auth/login');
         }
 
 //        $faker = Factory::create();
@@ -144,17 +152,21 @@ class financeController extends Controller
      */
     public function show($id)
     {
-        switch (\Auth::user()->username) {
-            case 'Sales':
-                return redirect(action('salesController@index'));
-                break;
-            case 'Development';
-                return redirect(action('developmentController@index'));
-                break;
-            case 'Finance':
-                break;
-            default:
-                return redirect(view('home'));
+        if ( isset(\Auth::user()->username) ) {
+            switch (\Auth::user()->username) {
+                case 'Sales':
+                    return redirect(action('salesController@index'));
+                    break;
+                case 'Development';
+                    return redirect(action('developmentController@index'));
+                    break;
+                case 'Finance':
+                    break;
+                default:
+                    return view('auth/login');
+            }
+        } else {
+            return view('auth/login');
         }
 
         $companies = Company::find($id);

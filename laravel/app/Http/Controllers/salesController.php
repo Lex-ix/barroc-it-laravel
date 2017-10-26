@@ -16,17 +16,21 @@ class salesController extends Controller
 
     public function index()
     {
-        switch (\Auth::user()->username) {
-            case 'Sales':
-                break;
-            case 'Development';
-                return redirect(action('developmentController@index'));
-                break;
-            case 'Finance':
-                return redirect(action('financeController@index'));
-                break;
-            default:
-                return redirect(view('home'));
+        if ( isset(\Auth::user()->username) ) {
+            switch (\Auth::user()->username) {
+                case 'Sales':
+                    break;
+                case 'Development';
+                    return redirect(action('developmentController@index'));
+                    break;
+                case 'Finance':
+                    return redirect(action('financeController@index'));
+                    break;
+                default:
+                    return view('auth/login');
+            }
+        } else {
+            return view('auth/login');
         }
 
         $companies = \App\Company::All();
@@ -63,17 +67,21 @@ class salesController extends Controller
      */
     public function show($id)
     {
-        switch (\Auth::user()->username) {
-            case 'Sales':
-                break;
-            case 'Development';
-                return redirect(action('developmentController@index'));
-                break;
-            case 'Finance':
-                return redirect(action('financeController@index'));
-                break;
-            default:
-                return redirect(view('home'));
+        if ( isset(\Auth::user()->username) ) {
+            switch (\Auth::user()->username) {
+                case 'Sales':
+                    break;
+                case 'Development';
+                    return redirect(action('developmentController@index'));
+                    break;
+                case 'Finance':
+                    return redirect(action('financeController@index'));
+                    break;
+                default:
+                    return view('auth/login');
+            }
+        } else {
+            return view('auth/login');
         }
 
         $company = \App\Company::find($id);
@@ -110,17 +118,21 @@ class salesController extends Controller
      */
     public function destroy($id)
     {
-        switch (\Auth::user()->username) {
-            case 'Sales':
-                break;
-            case 'Development';
-                return redirect(action('developmentController@index'));
-                break;
-            case 'Finance':
-                return redirect(action('financeController@index'));
-                break;
-            default:
-                return redirect(view('home'));
+        if ( isset(\Auth::user()->username) ) {
+            switch (\Auth::user()->username) {
+                case 'Sales':
+                    break;
+                case 'Development';
+                    return redirect(action('developmentController@index'));
+                    break;
+                case 'Finance':
+                    return redirect(action('financeController@index'));
+                    break;
+                default:
+                    return view('auth/login');
+            }
+        } else {
+            return view('auth/login');
         }
 
         $company = Company::findOrFail($id);

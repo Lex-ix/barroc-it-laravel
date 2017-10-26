@@ -26,17 +26,21 @@ class projectsController extends Controller
      */
     public function create()
     {
-        switch (\Auth::user()->username) {
-            case 'Sales':
-                break;
-            case 'Development';
-                return redirect(action('developmentController@index'));
-                break;
-            case 'Finance':
-                return redirect(action('financeController@index'));
-                break;
-            default:
-                return redirect(view('home'));
+        if ( isset(\Auth::user()->username) ) {
+            switch (\Auth::user()->username) {
+                case 'Sales':
+                    break;
+                case 'Development';
+                    return redirect(action('developmentController@index'));
+                    break;
+                case 'Finance':
+                    return redirect(action('financeController@index'));
+                    break;
+                default:
+                    return view('auth/login');
+            }
+        } else {
+            return view('auth/login');
         }
 
         $id = $_GET['id'];
@@ -52,17 +56,21 @@ class projectsController extends Controller
      */
     public function store(Request $request)
     {
-        switch (\Auth::user()->username) {
-            case 'Sales':
-                break;
-            case 'Development';
-                return redirect(action('developmentController@index'));
-                break;
-            case 'Finance':
-                return redirect(action('financeController@index'));
-                break;
-            default:
-                return redirect(view('home'));
+        if ( isset(\Auth::user()->username) ) {
+            switch (\Auth::user()->username) {
+                case 'Sales':
+                    break;
+                case 'Development';
+                    return redirect(action('developmentController@index'));
+                    break;
+                case 'Finance':
+                    return redirect(action('financeController@index'));
+                    break;
+                default:
+                    return view('auth/login');
+            }
+        } else {
+            return view('auth/login');
         }
 
         $this->validate($request, [
@@ -96,17 +104,21 @@ class projectsController extends Controller
      */
     public function show($id)
     {
-        switch (\Auth::user()->username) {
-            case 'Sales':
-                break;
-            case 'Development';
-                return redirect(action('developmentController@index'));
-                break;
-            case 'Finance':
-                return redirect(action('financeController@index'));
-                break;
-            default:
-                return redirect(view('home'));
+        if ( isset(\Auth::user()->username) ) {
+            switch (\Auth::user()->username) {
+                case 'Sales':
+                    break;
+                case 'Development';
+                    return redirect(action('developmentController@index'));
+                    break;
+                case 'Finance':
+                    return redirect(action('financeController@index'));
+                    break;
+                default:
+                    return view('auth/login');
+            }
+        } else {
+            return view('auth/login');
         }
 
         $project = \App\Project::find($id);
@@ -145,17 +157,21 @@ class projectsController extends Controller
      */
     public function destroy($id)
     {
-        switch (\Auth::user()->username) {
-            case 'Sales':
-                break;
-            case 'Development';
-                return redirect(action('developmentController@index'));
-                break;
-            case 'Finance':
-                return redirect(action('financeController@index'));
-                break;
-            default:
-                return redirect(view('home'));
+        if ( isset(\Auth::user()->username) ) {
+            switch (\Auth::user()->username) {
+                case 'Sales':
+                    break;
+                case 'Development';
+                    return redirect(action('developmentController@index'));
+                    break;
+                case 'Finance':
+                    return redirect(action('financeController@index'));
+                    break;
+                default:
+                    return view('auth/login');
+            }
+        } else {
+            return view('auth/login');
         }
 
         $project = Project::findOrFail($id);

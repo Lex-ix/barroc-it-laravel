@@ -23,18 +23,22 @@ class HomeController extends Controller
      */
     public function index()
     {
-        switch (\Auth::user()->username) {
-            case 'Sales':
-                return redirect(action('salesController@index'));
-                break;
-            case 'Development';
-                return redirect(action('developmentController@index'));
-                break;
-            case 'Finance':
-                return redirect(action('financeController@index'));
-                break;
-            default:
-                return redirect(view('home'));
+        if ( isset(\Auth::user()->username) ) {
+            switch (\Auth::user()->username) {
+                case 'Sales':
+                    return redirect(action('salesController@index'));
+                    break;
+                case 'Development';
+                    return redirect(action('developmentController@index'));
+                    break;
+                case 'Finance':
+                    return redirect(action('financeController@index'));
+                    break;
+                default:
+                    return view('auth/login');
+            }
+        } else {
+            return view('auth/login');
         }
     }
 }

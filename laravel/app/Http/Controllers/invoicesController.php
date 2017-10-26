@@ -66,19 +66,22 @@ class invoicesController extends Controller
      */
     public function store(Request $request)
     {
-        switch (\Auth::user()->username) {
-            case 'Sales':
-                return redirect(action('salesController@index'));
-                break;
-            case 'Development';
-                return redirect(action('developmentController@index'));
-                break;
-            case 'Finance':
-                break;
-            default:
-                return redirect(view('home'));
+        if ( isset(\Auth::user()->username) ) {
+            switch (\Auth::user()->username) {
+                case 'Sales':
+                    return redirect(action('salesController@index'));
+                    break;
+                case 'Development';
+                    return redirect(action('developmentController@index'));
+                    break;
+                case 'Finance':
+                    break;
+                default:
+                    return view('auth/login');
+            }
+        } else {
+            return view('auth/login');
         }
-
         $invoice = new \App\Invoice();
         $company = \App\Company::find($request->id);
 
@@ -105,17 +108,21 @@ class invoicesController extends Controller
      */
     public function show($id)
     {
-        switch (\Auth::user()->username) {
-            case 'Sales':
-                return redirect(action('salesController@index'));
-                break;
-            case 'Development';
-                return redirect(action('developmentController@index'));
-                break;
-            case 'Finance':
-                break;
-            default:
-                return redirect(view('home'));
+        if ( isset(\Auth::user()->username) ) {
+            switch (\Auth::user()->username) {
+                case 'Sales':
+                    return redirect(action('salesController@index'));
+                    break;
+                case 'Development';
+                    return redirect(action('developmentController@index'));
+                    break;
+                case 'Finance':
+                    break;
+                default:
+                    return view('auth/login');
+            }
+        } else {
+            return view('auth/login');
         }
 
         $companies = Company::find($id);
